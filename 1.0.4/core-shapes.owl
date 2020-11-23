@@ -1,0 +1,288 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/owl/owlapi/turtle#"
+     xml:base="http://www.semanticweb.org/owl/owlapi/turtle"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:doap="http://usefulinc.com/ns/doap#"
+     xmlns:prof="http://www.w3.org/ns/dx/prof/"
+     xmlns:prov="http://www.w3.org/ns/prov#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:vann="http://purl.org/vocab/vann/"
+     xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:schema="https://schema.org/">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/owl/owlapi/turtle#">
+        <terms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2020-08-12</terms:created>
+        <terms:creator>
+            <rdf:Description>
+                <schema:name>Priscila Moreira </schema:name>
+                <schema:affiliation>
+                    <rdf:Description>
+                        <schema:name>University of Notre Dame, Center for Research Computing</schema:name>
+                        <schema:url rdf:resource="https://crc.nd.edu"/>
+                    </rdf:Description>
+                </schema:affiliation>
+            </rdf:Description>
+        </terms:creator>
+        <terms:creator>
+            <rdf:Description>
+                <schema:email rdf:resource="file:/home/ngonidzashe/Documents/LANDRS/documentation/1.0.4/cvardema@nd.edu"/>
+                <schema:affiliation>
+                    <rdf:Description>
+                        <schema:name>University of Notre Dame, Center for Research Computing</schema:name>
+                        <schema:url rdf:resource="https://crc.nd.edu"/>
+                    </rdf:Description>
+                </schema:affiliation>
+                <schema:name>Charles F Vardeman II</schema:name>
+                <schema:identifier rdf:resource="https://orcid.org/0000-0003-4091-6059"/>
+                <schema:affiliation>
+                    <rdf:Description>
+                        <schema:affiliation>LANDRS</schema:affiliation>
+                        <schema:url rdf:resource="https://landrs.org"/>
+                    </rdf:Description>
+                </schema:affiliation>
+            </rdf:Description>
+        </terms:creator>
+        <terms:description xml:lang="en">This ontology is developed as part of the Sloan Funded LANDRS project to advance UxV data interoperability</terms:description>
+        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2020-08-12</terms:modified>
+        <terms:rights>Copyright 2020 University of Notre Dame.</terms:rights>
+        <terms:title xml:lang="en">Landrs Core Ontology</terms:title>
+        <vann:preferredNamespacePrefix>landrs-core</vann:preferredNamespacePrefix>
+        <vann:preferredNamespaceUri>https://w3id.org/landrs/ontologies/ns/core/</vann:preferredNamespaceUri>
+        <owl:versionInfo>0.0.1</owl:versionInfo>
+        <prof:hasResource>
+            <rdf:Description>
+                <schema:contentType>text/turtle</schema:contentType>
+                <terms:conformsTo rdf:resource="https://www.w3.org/TR/shacl/"/>
+                <prof:hasRole rdf:resource="http://www.w3.org/ns/dx/prof/role/validation"/>
+                <terms:format rdf:resource="https://w3id.org/mediatype/text/turtle"/>
+                <schema:contentType>application/n-triples</schema:contentType>
+                <rdf:type rdf:resource="http://www.w3.org/ns/dx/prof/ResourceDescriptor"/>
+                <rdf:type rdf:resource="https://schema.org/WebAPI"/>
+                <schema:contentType>application/ld+json</schema:contentType>
+                <schema:url>https://w3id.org/landrs/ontologies/ns/core</schema:url>
+            </rdf:Description>
+        </prof:hasResource>
+        <prof:isProfileOf rdf:resource="https://w3id.org/landrs/ns/ontologies/"/>
+        <prov:wasGeneratedBy>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/ns/prov#Activity"/>
+                <rdf:type rdf:resource="http://usefulinc.com/ns/doap#Project"/>
+                <doap:repository rdf:resource="https://github.com/landrs-toolkit/ontologies"/>
+            </rdf:Description>
+        </prov:wasGeneratedBy>
+        <schema:funder>
+            <rdf:Description>
+                <rdf:type rdf:resource="https://schema.org/Organization"/>
+                <schema:name>Alfred P. Sloan Foundation</schema:name>
+                <schema:url>https://sloan.org/</schema:url>
+            </rdf:Description>
+        </schema:funder>
+        <schema:licnese>https://creativecommons.org/publicdomain/zero/1.0</schema:licnese>
+        <schema:versionInfo>0.0.1</schema:versionInfo>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.org/dc/terms/conformsTo -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/conformsTo"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/format -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/format"/>
+    
+
+
+    <!-- http://usefulinc.com/ns/doap#repository -->
+
+    <owl:AnnotationProperty rdf:about="http://usefulinc.com/ns/doap#repository"/>
+    
+
+
+    <!-- http://www.w3.org/ns/dx/prof/hasRole -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/ns/dx/prof/hasRole"/>
+    
+
+
+    <!-- https://schema.org/affiliation -->
+
+    <owl:AnnotationProperty rdf:about="https://schema.org/affiliation"/>
+    
+
+
+    <!-- https://schema.org/contentType -->
+
+    <owl:AnnotationProperty rdf:about="https://schema.org/contentType"/>
+    
+
+
+    <!-- https://schema.org/email -->
+
+    <owl:AnnotationProperty rdf:about="https://schema.org/email"/>
+    
+
+
+    <!-- https://schema.org/identifier -->
+
+    <owl:AnnotationProperty rdf:about="https://schema.org/identifier"/>
+    
+
+
+    <!-- https://schema.org/name -->
+
+    <owl:AnnotationProperty rdf:about="https://schema.org/name"/>
+    
+
+
+    <!-- https://schema.org/url -->
+
+    <owl:AnnotationProperty rdf:about="https://schema.org/url"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.org/vocommons/voaf#Vocabulary -->
+
+    <owl:Class rdf:about="http://purl.org/vocommons/voaf#Vocabulary"/>
+    
+
+
+    <!-- http://usefulinc.com/ns/doap#Project -->
+
+    <owl:Class rdf:about="http://usefulinc.com/ns/doap#Project"/>
+    
+
+
+    <!-- http://www.w3.org/ns/dcat#Dataset -->
+
+    <owl:Class rdf:about="http://www.w3.org/ns/dcat#Dataset"/>
+    
+
+
+    <!-- http://www.w3.org/ns/dx/prof/ResourceDescriptor -->
+
+    <owl:Class rdf:about="http://www.w3.org/ns/dx/prof/ResourceDescriptor"/>
+    
+
+
+    <!-- http://www.w3.org/ns/prov#Activity -->
+
+    <owl:Class rdf:about="http://www.w3.org/ns/prov#Activity"/>
+    
+
+
+    <!-- http://www.w3.org/ns/prov#Entity -->
+
+    <owl:Class rdf:about="http://www.w3.org/ns/prov#Entity"/>
+    
+
+
+    <!-- https://schema.org/Organization -->
+
+    <owl:Class rdf:about="https://schema.org/Organization"/>
+    
+
+
+    <!-- https://schema.org/WebAPI -->
+
+    <owl:Class rdf:about="https://schema.org/WebAPI"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/owl/owlapi/turtle# -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/owl/owlapi/turtle#">
+        <rdf:type rdf:resource="http://purl.org/vocommons/voaf#Vocabulary"/>
+        <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
+        <rdf:type rdf:resource="http://www.w3.org/ns/prov#Entity"/>
+    </owl:NamedIndividual>
+    <rdf:Description>
+        <rdf:type rdf:resource="https://schema.org/Organization"/>
+        <schema:name>Alfred P. Sloan Foundation</schema:name>
+        <schema:url>https://sloan.org/</schema:url>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://usefulinc.com/ns/doap#Project"/>
+        <rdf:type rdf:resource="http://www.w3.org/ns/prov#Activity"/>
+        <doap:repository rdf:resource="https://github.com/landrs-toolkit/ontologies"/>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/ns/dx/prof/ResourceDescriptor"/>
+        <rdf:type rdf:resource="https://schema.org/WebAPI"/>
+        <terms:conformsTo rdf:resource="https://www.w3.org/TR/shacl/"/>
+        <terms:format rdf:resource="https://w3id.org/mediatype/text/turtle"/>
+        <prof:hasRole rdf:resource="http://www.w3.org/ns/dx/prof/role/validation"/>
+        <schema:contentType>application/ld+json</schema:contentType>
+        <schema:contentType>application/n-triples</schema:contentType>
+        <schema:contentType>text/turtle</schema:contentType>
+        <schema:url>https://w3id.org/landrs/ontologies/ns/core</schema:url>
+    </rdf:Description>
+    <rdf:Description>
+        <schema:affiliation>
+            <rdf:Description>
+                <schema:name>University of Notre Dame, Center for Research Computing</schema:name>
+                <schema:url rdf:resource="https://crc.nd.edu"/>
+            </rdf:Description>
+        </schema:affiliation>
+        <schema:name>Priscila Moreira </schema:name>
+    </rdf:Description>
+    <rdf:Description>
+        <schema:affiliation>
+            <rdf:Description>
+                <schema:affiliation>LANDRS</schema:affiliation>
+                <schema:url rdf:resource="https://landrs.org"/>
+            </rdf:Description>
+        </schema:affiliation>
+        <schema:affiliation>
+            <rdf:Description>
+                <schema:name>University of Notre Dame, Center for Research Computing</schema:name>
+                <schema:url rdf:resource="https://crc.nd.edu"/>
+            </rdf:Description>
+        </schema:affiliation>
+        <schema:email rdf:resource="file:/home/ngonidzashe/Documents/LANDRS/documentation/1.0.4/cvardema@nd.edu"/>
+        <schema:identifier rdf:resource="https://orcid.org/0000-0003-4091-6059"/>
+        <schema:name>Charles F Vardeman II</schema:name>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.6) https://github.com/owlcs/owlapi -->
+

@@ -1,0 +1,1833 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Landrs Core Ontology</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    
+    <style>
+        #pylode {
+            position: fixed;
+            top: 130px;
+            left: -60px;
+            font-size: small;
+            transform: rotate(-90deg);
+            color: grey;
+        }
+        #pylode a {
+            font-size: 2em;
+            font-weight: bold;
+            text-decoration: none;
+            color: #005A9C;
+        }
+        #pylode a:hover {
+            color: #333;
+        }
+
+        .cardinality {
+            font-style: italic;
+            color: #aa00aa;
+        }
+
+        dt {
+            font-weight: bold;
+            padding: 5px 0 5px 0;
+        }
+
+        ul.hlist {
+            list-style-type: none;
+            border: 1px solid navy;
+            padding:5px;
+            background-color: #F4FFFF;
+        }
+
+        ul.hierarchy {
+            border: 1px solid navy;
+            padding: 5px 25px 5px 25px;
+            background-color: #F4FFFF;
+        }
+
+
+        ul.hlist li {
+            display: inline;
+            margin-right: 10px;
+        }
+
+        .entity {
+            border: 1px solid navy;
+            margin:5px 0 5px 0;
+            padding: 5px;
+        }
+
+        .entity th {
+            width: 150px;
+            vertical-align: top;
+        }
+
+        .entity th,
+        .entity td {
+            padding-bottom: 20px;
+        }
+
+        .entity table th {
+            text-align: left;
+        }
+
+        section#overview img {
+            max-width: 1000px;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            text-align: left
+        }
+        h1, h2, h3 {
+            color: #005A9C; background: white
+        }
+        h1 {
+            font: 170% sans-serif;
+            line-height: 110%;
+        }
+        h2 {
+            font: 140% sans-serif;
+            margin-top:40px;
+        }
+        h3 {
+            font: 120% sans-serif;
+            margin-top: 3px;
+            padding-bottom: 5px;
+            border-bottom: 1px solid navy;
+        }
+        h4 { font: bold 100% sans-serif }
+        h5 { font: italic 100% sans-serif }
+        h6 { font: small-caps 100% sans-serif }
+
+
+        body {
+            padding: 2em 70px 2em 70px;
+            margin: 0;
+            font-family: sans-serif;
+            color: black;
+            background: white;
+            background-position: top left;
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+            text-align: justify;
+        }
+
+        section {
+            max-width: 1500px;
+        }
+
+        .figure {
+            margin-bottom: 20px;
+        }
+
+        :link { color: #00C; background: transparent }
+        :visited { color: #609; background: transparent }
+        a:active { color: #C00; background: transparent }
+
+        .sup-c,
+        .sup-op,
+        .sup-fp,
+        .sup-dp,
+        .sup-ap,
+        .sup-p,
+        .sup-ni,
+        .sup-cp,
+        .sup-cl {
+            cursor:help;
+            margin-left: 3px;
+        }
+
+        .sup-c {
+            color:orange;
+        }
+
+        .sup-op {
+            color:navy;
+        }
+
+        .sup-fp {
+            color:lightskyblue;
+        }
+
+        .sup-dp {
+            color:green;
+        }
+
+        .sup-ap {
+            color:darkred;
+        }
+
+        .sup-p {
+            color:black;
+        }
+
+        .sup-ni {
+            color:brown;
+        }
+
+        .sup-cp {
+            color:orange;
+        }
+
+        .sup-cl {
+            color:darkred;
+        }
+
+        code {
+            font-size: large;
+            color: darkred;
+        }
+
+        /* less prominent links for properties */
+        .proplink {
+            color: #336;
+            text-decoration: none;
+        }
+    </style>
+    
+    <script type="application/ld+json">
+      [
+  {
+    "@id": "https://w3id.org/landrs/def/ontologies/core/",
+    "@type": [
+      "https://schema.org/DefinedTermSet"
+    ],
+    "https://schema.org/codeRepository": [
+      {
+        "@id": "https://github.com/landrs-toolkit/ontologies"
+      }
+    ],
+    "https://schema.org/description": [
+      {
+        "@value": "<p>This ontology is developed as part of the Sloan Funded LANDRS project to advance UxV data interoperability</p>"
+      }
+    ],
+    "https://schema.org/name": [
+      {
+        "@value": "Landrs Core Ontology"
+      }
+    ],
+    "https://schema.org/rights": [
+      {
+        "@value": "&copy; 2020 University of Notre Dame."
+      }
+    ]
+  }
+]
+    </script>
+</head>
+<body>
+  <div id="pylode">made by <a href="http://github.com/rdflib/pyLODE">
+    <span style="color:#329545;">p</span><span style="color:#f9cb33;">y</span>LODE</a>
+    <span style="font-size:smaller;">2.8.3</span>
+  </div>
+  <h1>Landrs Core Ontology</h1>
+<section id="metadata">
+    <h2 style="display:none;">Metadata</h2>
+    <dl>
+        <dt>URI</dt>
+        <dd><code>https://w3id.org/landrs/def/ontologies/core/</code></dd>
+        <dt><a class="proplink" href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/creator">Creator</a>(s)</dt>
+        <dd>
+            
+    <a href="https://orcid.org/0000-0003-4091-6059">Charles F Vardeman II</a>
+    <a href="https://orcid.org/0000-0003-4091-6059"><svg width="15px" height="15px" viewBox="0 0 72 72" version="1.1"
+    xmlns="http://www.w3.org/2000/svg"
+    xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Orcid logo</title>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="hero" transform="translate(-924.000000, -72.000000)" fill-rule="nonzero">
+            <g id="Group-4">
+                <g id="vector_iD_icon" transform="translate(924.000000, 72.000000)">
+                    <path d="M72,36 C72,55.884375 55.884375,72 36,72 C16.115625,72 0,55.884375 0,36 C0,16.115625 16.115625,0 36,0 C55.884375,0 72,16.115625 72,36 Z" id="Path" fill="#A6CE39"></path>
+                    <g id="Group" transform="translate(18.868966, 12.910345)" fill="#FFFFFF">
+                        <polygon id="Path" points="5.03734929 39.1250878 0.695429861 39.1250878 0.695429861 9.14431787 5.03734929 9.14431787 5.03734929 22.6930505 5.03734929 39.1250878"></polygon>
+                        <path d="M11.409257,9.14431787 L23.1380784,9.14431787 C34.303014,9.14431787 39.2088191,17.0664074 39.2088191,24.1486995 C39.2088191,31.846843 33.1470485,39.1530811 23.1944669,39.1530811 L11.409257,39.1530811 L11.409257,9.14431787 Z M15.7511765,35.2620194 L22.6587756,35.2620194 C32.49858,35.2620194 34.7541226,27.8438084 34.7541226,24.1486995 C34.7541226,18.1301509 30.8915059,13.0353795 22.4332213,13.0353795 L15.7511765,13.0353795 L15.7511765,35.2620194 Z" id="Shape"></path>
+                        <path d="M5.71401206,2.90182329 C5.71401206,4.441452 4.44526937,5.72914146 2.86638958,5.72914146 C1.28750978,5.72914146 0.0187670918,4.441452 0.0187670918,2.90182329 C0.0187670918,1.33420133 1.28750978,0.0745051096 2.86638958,0.0745051096 C4.44526937,0.0745051096 5.71401206,1.36219458 5.71401206,2.90182329 Z" id="Path"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg></a>
+    (<a href="mailto:cvardema@nd.edu">cvardema@nd.edu</a>) of 
+    <a href="https://landrs.org">University of Notre Dame, Center for Research Computing</a><br/>
+            
+    Priscila Moreira  of 
+    <a href="https://crc.nd.edu">University of Notre Dame, Center for Research Computing</a><br/>
+        </dd>
+        <dt><a class="proplink" href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/created">Created</a></dt>
+        <dd>2020-08-12</dd>
+        <dt><a class="proplink" href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/modified">Modified</a></dt>
+        <dd>2020-08-12</dd>
+        <dt>Version Information</dt>
+        <dd>0.0.1</dd>
+        <dt>Rights</dt>
+        <dd>&copy; 2020 University of Notre Dame.</dd>
+        <dt>Ontology RDF</dt>
+        <dd><a href="core.ttl">RDF (turtle)</a></dd>
+        <dt>Code Repository</dt>
+        <dd><a href="https://github.com/landrs-toolkit/ontologies">https://github.com/landrs-toolkit/ontologies</a></dd>
+    </dl>
+    <h2>Description</h2>
+    <div id="description">
+        <p>This ontology is developed as part of the Sloan Funded LANDRS project to advance UxV data interoperability</p>
+    </div>
+</section>
+<section id="toc">
+    <h2>Table of Contents</h2>
+    <ol>
+        <li><a href="#classes">Classes</a></li>
+        <li><a href="#objectproperties">Object Properties</a></li>
+        <li><a href="#annotationproperties">Annotation Properties</a></li>
+        <li><a href="#properties">Properties</a></li>
+        <li><a href="#namespaces">Namespaces</a></li>
+        <li><a href="#legend">Legend</a></li>
+    </ol>
+</section>
+<section id="overview">
+    <h2>Overview</h2>
+    <div class="figure">
+        <div style="width:500px; height:50px; background-color: lightgrey; border:solid 2px grey; padding:10px;margin-bottom:5px; text-align:center;">Pictures say 1,000 words</div>
+        <div class="caption"><strong>Figure 1:</strong> Ontology overview</div>
+    </div>
+</section>
+  <section id="classes">
+    <h2>Classes <span style="float:right; font-size:smaller;"><a href="">&uparrow;</a></span></h2>
+    <ul class="hlist">
+        <li><a href="#AerialRobot">Aerial Robot</a></li>
+        <li><a href="#AerialVehicle">Aerial Vehicle</a></li>
+        <li><a href="#Agent">Agent</a></li>
+        <li><a href="#Agent1">Agent</a></li>
+        <li><a href="#AgentRole">AgentRole</a></li>
+        <li><a href="#Airframe">Airframe</a></li>
+        <li><a href="#AutomatedRobot">Automated Robot</a></li>
+        <li><a href="#AutonomousRobot">Autonomous Robot</a></li>
+        <li><a href="#AutonomousSurfaceVehicle">Autonomous Surface Vehicle</a></li>
+        <li><a href="#AutonomousUnderwaterVehicle">Autonomous Underwater Vehicle</a></li>
+        <li><a href="#Autopilot">Autopilot</a></li>
+        <li><a href="#Buoy">Buoy</a></li>
+        <li><a href="#CommunicationSystem">Communication System</a></li>
+        <li><a href="#CompanionComputer">Companion Computer</a></li>
+        <li><a href="#Component">Component</a></li>
+        <li><a href="#Deployment">Deployment</a></li>
+        <li><a href="#Event">Event</a></li>
+        <li><a href="#Flight">Flight</a></li>
+        <li><a href="#FlightControlSystem">Flight Control System</a></li>
+        <li><a href="#FlightControllerBoard">Flight Controller Board</a></li>
+        <li><a href="#GroundControlStation">Ground Control Station</a></li>
+        <li><a href="#Mission">Mission</a></li>
+        <li><a href="#MotorizedVehicle">Motorized Vehicle</a></li>
+        <li><a href="#Payload">Payload</a></li>
+        <li><a href="#Place">Place</a></li>
+        <li><a href="#Platform">Platform</a></li>
+        <li><a href="#Product">Product</a></li>
+        <li><a href="#RemotelyOperatedUnderwaterVehicle">Remotely Operated Underwater Vehicle</a></li>
+        <li><a href="#RemotelyPilotedRobot">Remotely Piloted Robot</a></li>
+        <li><a href="#Researcher">Researcher</a></li>
+        <li><a href="#Robot">Robot</a></li>
+        <li><a href="#RoboticVehicle">Robotic Vehicle</a></li>
+        <li><a href="#SensorPayload">Sensor Payload</a></li>
+        <li><a href="#SmartSensor">Smart Sensor</a></li>
+        <li><a href="#SurfaceVehicle">Surface Vehicle</a></li>
+        <li><a href="#UnderwaterGlider">Underwater Glider</a></li>
+        <li><a href="#UnderwaterRobot">Underwater Robot</a></li>
+        <li><a href="#UnderwaterRobot1">Underwater Robot</a></li>
+        <li><a href="#UnderwaterVehicle">Underwater Vehicle</a></li>
+        <li><a href="#UnmannedAerialVehicle">Unmanned Aerial Vehicle</a></li>
+        <li><a href="#UnmannedAircraftComponent">Unmanned Aircraft Component</a></li>
+        <li><a href="#UnmannedAircraftSystem">Unmanned Aircraft System</a></li>
+        <li><a href="#UnmannedSurfaceVehicle">Unmanned Surface Vehicle</a></li>
+        <li><a href="#UnmannedVehicle">Unmanned Vehicle</a></li>
+        <li><a href="#UnmotorizedVehicle">Unmotorized Vehicle</a></li>
+        <li><a href="#UxVBody">UxV Body</a></li>
+        <li><a href="#UxVOperator">UxVOperator</a></li>
+        <li><a href="#Vehicle">Vehicle</a></li>
+        <li><a href="#Vessel">Vessel</a></li>
+        <li><a href="#Vocabulary">Vocabulary</a></li>
+    </ul>
+    <div class="entity class" id="Vocabulary">
+        <h3>Vocabulary<sup title="class" class="sup-c">c</sup></h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://purl.org/vocommons/voaf#Vocabulary</code></td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="Agent">
+        <h3>Agent<sup title="class" class="sup-c">c</sup></h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://xmlns.com/foaf/0.1/Agent</code></td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="AutonomousSurfaceVehicle">
+        <h3>Autonomous Surface Vehicle<sup title="class" class="sup-c">c</sup></h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://w3id.org/landrs/def/ontologies/core/ASV</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>Vehicle that operates on the surface of the water without a crew</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="https://w3id.org/landrs/def/ontologies/core/AutonomousRobot">AutonomousRobot</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="https://w3id.org/landrs/def/ontologies/core/SurfaceRobot">SurfaceRobot</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="AutonomousUnderwaterVehicle">
+        <h3>Autonomous Underwater Vehicle<sup title="class" class="sup-c">c</sup></h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://w3id.org/landrs/def/ontologies/core/AUV</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>An autonomous underwater vehicle (AUV) is a robot that travels underwater without requiring input from an operator.</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="https://w3id.org/landrs/def/ontologies/core/UnderwaterRobot">UnderwaterRobot</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="https://w3id.org/landrs/def/ontologies/core/AutonomousRobot">AutonomousRobot</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>Sub-classes</th>
+                <td>
+                    <a href="https://w3id.org/landrs/def/ontologies/core/UnderwaterGlider">UnderwaterGlider</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="AerialRobot">
+        <h3>Aerial Robot<sup title="class" class="sup-c">c</sup></h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://w3id.org/landrs/def/ontologies/core/AerialRobot</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>Aerial Robots are vehicles that move autonomously in the air.</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="https://w3id.org/landrs/def/ontologies/core/RoboticVehice">RoboticVehice</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="https://w3id.org/landrs/def/ontologies/core/AerialVehicle">AerialVehicle</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>Sub-classes</th>
+                <td>
+                    <a href="https://w3id.org/landrs/def/ontologies/core/UAV">UAV</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="AerialVehicle">
+        <h3>Aerial Vehicle<sup title="class" class="sup-c">c</sup></h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://w3id.org/landrs/def/ontologies/core/AerialVehicle</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>Synonym with Aircraft</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="https://w3id.org/landrs/def/ontologies/core/Vehicle">Vehicle</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>Sub-classes</th>
+                <td>
+                    <a href="https://w3id.org/landrs/def/ontologies/core/AerialRobot">AerialRobot</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="Agent1">
+        <h3>Agent<sup title="class" class="sup-c">c</sup></h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://w3id.org/landrs/def/ontologies/core/Agent</code></td>
+            </tr>
+            <tr>
+                <th>Sub-classes</th>
+                <td>
+                    <a href="https://w3id.org/landrs/def/ontologies/core/UxV">UxV</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="AgentRole">
+        <h3>AgentRole<sup title="class" class="sup-c">c</sup></h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://w3id.org/landrs/def/ontologies/core/AgentRole</code></td>
+            </tr>
+            <tr>
+                <th>Sub-classes</th>
+                <td>
+                    <a href="https://w3id.org/landrs/def/ontologies/core/Researcher">Researcher</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="https://w3id.org/landrs/def/ontologies/core/UxVOperator">UxVOperator</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>In range of</th>
+                <td>
+                    <a href="https://w3id.org/landrs/def/ontologies/core/providesAgentRole">providesAgentRole</a><sup class="sup-op" title="object property">op</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="Airframe">
+        <h3>Airframe<sup title="class" class="sup-c">c</sup></h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://w3id.org/landrs/def/ontologies/core/Airframe</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>The mechanical structure of an aircraft is known as the airframe. This structure is typically considered to include the fuselage, undercarriage, empennage and wings, and exclude the propulsion system.</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="https://w3id.org/landrs/def/ontologies/core/Body">Body</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="AutomatedRobot">
+        <h3>Automated Robot<sup title="class" class="sup-c">c</sup></h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://w3id.org/landrs/def/ontologies/core/AutomatedRobot</code></td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="https://w3id.org/landrs/def/ontologies/core/Robot">Robot</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="AutonomousRobot">
+        <h3>Autonomous Robot<sup title="class" class="sup-c">c</sup></h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://w3id.org/landrs/def/ontologies/core/AutonomousRobot</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>An autonomous robot is a robot that performs behaviors or tasks with a high degree of autonomy (without external influence).</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="https://w3id.org/landrs/def/ontologies/core/Robot">Robot</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>Sub-classes</th>
+                <td>
+                    <a href="https://w3id.org/landrs/def/ontologies/core/AUV">AUV</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="https://w3id.org/landrs/def/ontologies/core/ASV">ASV</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="Autopilot">
+        <h3>Autopilot<sup title="class" class="sup-c">c</sup></h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://w3id.org/landrs/def/ontologies/core/Autopilot</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>Software to control and navigate an aircraft</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="https://schema.org/SoftwareApplicaion">sdo:SoftwareApplicaion</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="UxVBody">
+        <h3>UxV Body<sup title="class" class="sup-c">c</sup></h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://w3id.org/landrs/def/ontologies/core/Body</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>Body of the UxV, for a UAV this would be an airframe</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="https://w3id.org/landrs/def/ontologies/core/Product">Product</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>Sub-classes</th>
+                <td>
+                    <a href="https://w3id.org/landrs/def/ontologies/core/Airframe">Airframe</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="Buoy">
+        <h3>Buoy<sup title="class" class="sup-c">c</sup></h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://w3id.org/landrs/def/ontologies/core/Buoy</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>A floating device that can be anchored (stationary) or allowed to drift with ocean currents.</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="https://w3id.org/landrs/def/ontologies/core/UnmotorizedVehicle">UnmotorizedVehicle</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="CommunicationSystem">
+        <h3>Communication System<sup title="class" class="sup-c">c</sup></h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://w3id.org/landrs/def/ontologies/core/CommunicationSystem</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>Communication System, frequency and protocol by which a UxS communicates. For example Civilian UAV communications systems typically operate on frequencies of 2.4 GHz and 5.8 GHz. UAV communications systems work by using one frequency to control the aerial vehicle from the ground via a remote pilot while the other frequency is used to beam or relay First-Person View (FPV) video. By utilizing high-quality, reliable communications links, civilian UAVs are able to relay aerial visuals and data to those on the ground with ease, while still remaining in flight.</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="https://w3id.org/landrs/def/ontologies/core/Product">Product</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="CompanionComputer">
+        <h3>Companion Computer<sup title="class" class="sup-c">c</sup></h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://w3id.org/landrs/def/ontologies/core/CompanionComputer</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>A companion computer is a device that travels on-board the vehicle and controls/communicates with the autopilot over a low-latency link. Apps running on a companion computer can perform computationally intensive or time-sensitive tasks, and add much greater intelligence than is provided by the autopilot alone.</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="https://w3id.org/landrs/def/ontologies/core/Payload">Payload</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="https://w3id.org/landrs/def/ontologies/core/Product">Product</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="Component">
+        <h3>Component<sup title="class" class="sup-c">c</sup></h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://w3id.org/landrs/def/ontologies/core/Component</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>Winston Part-Whole PO-Component-Type to enumerate composition of a UxV</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="https://w3id.org/landrs/def/ontologies/core/Product">Product</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>Sub-classes</th>
+                <td>
+                    <a href="https://w3id.org/landrs/def/ontologies/core/UAVComponent">UAVComponent</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="Deployment">
+        <h3>Deployment<sup title="class" class="sup-c">c</sup></h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://w3id.org/landrs/def/ontologies/core/Deployment</code></td>
+            </tr>
+            <tr>
+                <th>Is Defined By</th>
+                <td>
+                    https://w3id.org/landrs/def/ontologies/core/
+                </td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>A deployment for scientifc measurments</p>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="Event">
+        <h3>Event<sup title="class" class="sup-c">c</sup></h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://w3id.org/landrs/def/ontologies/core/Event</code></td>
+            </tr>
+            <tr>
+                <th>Is Defined By</th>
+                <td>
+                    https://w3id.org/landrs/def/ontologies/core/
+                </td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>An event</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Sub-classes</th>
+                <td>
+                    <a href="https://w3id.org/landrs/def/ontologies/core/Flight">Flight</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="https://w3id.org/landrs/def/ontologies/core/Mission">Mission</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>In domain of</th>
+                <td>
+                    <a href="https://schema.org/location">sdo:location</a><sup class="sup-op" title="object property">op</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="Flight">
+        <h3>Flight<sup title="class" class="sup-c">c</sup></h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://w3id.org/landrs/def/ontologies/core/Flight</code></td>
+            </tr>
+            <tr>
+                <th>Is Defined By</th>
+                <td>
+                    https://w3id.org/landrs/def/ontologies/core/
+                </td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>A flight</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="https://w3id.org/landrs/def/ontologies/core/Event">Event</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="FlightControlSystem">
+        <h3>Flight Control System<sup title="class" class="sup-c">c</sup></h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://w3id.org/landrs/def/ontologies/core/FlightControlSystem</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>Aircraft system utilized to control flight surfaces</p>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="FlightControllerBoard">
+        <h3>Flight Controller Board<sup title="class" class="sup-c">c</sup></h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://w3id.org/landrs/def/ontologies/core/FlightControllerBoard</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>A flight controller (FC) is a small circuit board of varying complexity. Its function is to direct the RPM of each motor in response to input. A command from the pilot for the multi-rotor to move forward is fed into the flight controller, which determines how to manipulate the motors accordingly.</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="https://w3id.org/landrs/def/ontologies/core/Product">Product</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="GroundControlStation">
+        <h3>Ground Control Station<sup title="class" class="sup-c">c</sup></h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://w3id.org/landrs/def/ontologies/core/GroundControlStation</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>A ground control station (GCS) is a land- or sea-based control center that provides the facilities for human control of Unmanned Aerial Vehicles (UAVs or drones).</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="https://w3id.org/landrs/def/ontologies/core/Product">Product</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="Mission">
+        <h3>Mission<sup title="class" class="sup-c">c</sup></h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://w3id.org/landrs/def/ontologies/core/Mission</code></td>
+            </tr>
+            <tr>
+                <th>Is Defined By</th>
+                <td>
+                    https://w3id.org/landrs/def/ontologies/core/
+                </td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    
+                </td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="https://w3id.org/landrs/def/ontologies/core/Event">Event</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="MotorizedVehicle">
+        <h3>Motorized Vehicle<sup title="class" class="sup-c">c</sup></h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://w3id.org/landrs/def/ontologies/core/MotorizedVehicle</code></td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="https://w3id.org/landrs/def/ontologies/core/Vehicle">Vehicle</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>Sub-classes</th>
+                <td>
+                    <a href="https://w3id.org/landrs/def/ontologies/core/Vessel">Vessel</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="https://w3id.org/landrs/def/ontologies/core/USV">USV</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="https://w3id.org/landrs/def/ontologies/core/UAV">UAV</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="https://w3id.org/landrs/def/ontologies/core/ROV">ROV</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="Payload">
+        <h3>Payload<sup title="class" class="sup-c">c</sup></h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://w3id.org/landrs/def/ontologies/core/Payload</code></td>
+            </tr>
+            <tr>
+                <th>Is Defined By</th>
+                <td>
+                    https://w3id.org/landrs/def/ontologies/core/
+                </td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>Unmanned vehicle payload</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Sub-classes</th>
+                <td>
+                    <a href="https://w3id.org/landrs/def/ontologies/core/CompanionComputer">CompanionComputer</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="Place">
+        <h3>Place<sup title="class" class="sup-c">c</sup></h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://w3id.org/landrs/def/ontologies/core/Place</code></td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="https://schema.org/Place">sdo:Place</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>In range of</th>
+                <td>
+                    <a href="https://schema.org/location">sdo:location</a><sup class="sup-op" title="object property">op</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="Platform">
+        <h3>Platform<sup title="class" class="sup-c">c</sup></h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://w3id.org/landrs/def/ontologies/core/Platform</code></td>
+            </tr>
+            <tr>
+                <th>Is Defined By</th>
+                <td>
+                    https://w3id.org/landrs/def/ontologies/core/
+                </td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    
+                </td>
+            </tr>
+            <tr>
+                <th>Sub-classes</th>
+                <td>
+                    <a href="https://w3id.org/landrs/def/ontologies/core/SmartSensor">SmartSensor</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="Product">
+        <h3>Product<sup title="class" class="sup-c">c</sup></h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://w3id.org/landrs/def/ontologies/core/Product</code></td>
+            </tr>
+            <tr>
+                <th>Is Defined By</th>
+                <td>
+                    https://w3id.org/landrs/def/ontologies/core/
+                </td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    
+                </td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="https://schema.org/Product">sdo:Product</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>Sub-classes</th>
+                <td>
+                    <a href="https://w3id.org/landrs/def/ontologies/core/Robot">Robot</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="https://w3id.org/landrs/def/ontologies/core/UAS">UAS</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="https://w3id.org/landrs/def/ontologies/core/CommunicationSystem">CommunicationSystem</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="https://w3id.org/landrs/def/ontologies/core/CompanionComputer">CompanionComputer</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="https://w3id.org/landrs/def/ontologies/core/Vehicle">Vehicle</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="https://w3id.org/landrs/def/ontologies/core/Body">Body</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="https://w3id.org/landrs/def/ontologies/core/FlightControllerBoard">FlightControllerBoard</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="https://w3id.org/landrs/def/ontologies/core/GroundControlStation">GroundControlStation</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="https://w3id.org/landrs/def/ontologies/core/Component">Component</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="RemotelyOperatedUnderwaterVehicle">
+        <h3>Remotely Operated Underwater Vehicle<sup title="class" class="sup-c">c</sup></h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://w3id.org/landrs/def/ontologies/core/ROV</code></td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="https://w3id.org/landrs/def/ontologies/core/UnderwaterRobot">UnderwaterRobot</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="https://w3id.org/landrs/def/ontologies/core/MotorizedVehicle">MotorizedVehicle</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="RemotelyPilotedRobot">
+        <h3>Remotely Piloted Robot<sup title="class" class="sup-c">c</sup></h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://w3id.org/landrs/def/ontologies/core/RemotelyPilotedRobot</code></td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="https://w3id.org/landrs/def/ontologies/core/Robot">Robot</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="Researcher">
+        <h3>Researcher<sup title="class" class="sup-c">c</sup></h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://w3id.org/landrs/def/ontologies/core/Researcher</code></td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="https://w3id.org/landrs/def/ontologies/core/AgentRole">AgentRole</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="Robot">
+        <h3>Robot<sup title="class" class="sup-c">c</sup></h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://w3id.org/landrs/def/ontologies/core/Robot</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>Mechanical or virtual artificial agent carrying out physical activities</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="https://w3id.org/landrs/def/ontologies/core/Product">Product</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>Sub-classes</th>
+                <td>
+                    <a href="https://w3id.org/landrs/def/ontologies/core/RemotelyPilotedRobot">RemotelyPilotedRobot</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="https://w3id.org/landrs/def/ontologies/core/RoboticVehicle">RoboticVehicle</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="https://w3id.org/landrs/def/ontologies/core/AutonomousRobot">AutonomousRobot</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="https://w3id.org/landrs/def/ontologies/core/AutomatedRobot">AutomatedRobot</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="RoboticVehicle">
+        <h3>Robotic Vehicle<sup title="class" class="sup-c">c</sup></h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://w3id.org/landrs/def/ontologies/core/RoboticVehicle</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>Robotic vehicles are machines that move autonomously on the ground, in the air, undersea, or in space. Such vehicles are “unmanned,” in the sense that no humans are on board. In general, these vehicles move by themselves, under their own power, with sensors and computational resources onboard to guide their motion.</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="https://w3id.org/landrs/def/ontologies/core/Vehicle">Vehicle</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="https://w3id.org/landrs/def/ontologies/core/Robot">Robot</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>Sub-classes</th>
+                <td>
+                    <a href="https://w3id.org/landrs/def/ontologies/core/SurfaceRobot">SurfaceRobot</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="SensorPayload">
+        <h3>Sensor Payload<sup title="class" class="sup-c">c</sup></h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://w3id.org/landrs/def/ontologies/core/SensorPayload</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>Payload that is a instrument platform such as cameras, atmospheric sensors, etc</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="https://w3id.org/landrs/def/ontologies/core/payload">payload</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="SmartSensor">
+        <h3>Smart Sensor<sup title="class" class="sup-c">c</sup></h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://w3id.org/landrs/def/ontologies/core/SmartSensor</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>Smart-Sensor - A SmartSensor is composed of one or more Sensors together with a MicroController that implements different Algorithms, and makes Algorithm Executions on the result of the Observations these Sensors make to output a resulting value for some Indicator. This value may then be communicated by some CommunicatingSystemCommunicatingSystem.</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="https://w3id.org/landrs/def/ontologies/core/Platform">Platform</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="UnderwaterRobot">
+        <h3>Underwater Robot<sup title="class" class="sup-c">c</sup></h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://w3id.org/landrs/def/ontologies/core/SurfaceRobot</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>Surface Robots are vehicles that move autonomously on the water surface.</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="https://w3id.org/landrs/def/ontologies/core/SurfaceVehicle">SurfaceVehicle</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="https://w3id.org/landrs/def/ontologies/core/RoboticVehicle">RoboticVehicle</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>Sub-classes</th>
+                <td>
+                    <a href="https://w3id.org/landrs/def/ontologies/core/ASV">ASV</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="https://w3id.org/landrs/def/ontologies/core/USV">USV</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="SurfaceVehicle">
+        <h3>Surface Vehicle<sup title="class" class="sup-c">c</sup></h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://w3id.org/landrs/def/ontologies/core/SurfaceVehicle</code></td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="https://w3id.org/landrs/def/ontologies/core/Vehicle">Vehicle</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>Sub-classes</th>
+                <td>
+                    <a href="https://w3id.org/landrs/def/ontologies/core/SurfaceRobot">SurfaceRobot</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="https://w3id.org/landrs/def/ontologies/core/Vessel">Vessel</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="UnmannedAircraftSystem">
+        <h3>Unmanned Aircraft System<sup title="class" class="sup-c">c</sup></h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://w3id.org/landrs/def/ontologies/core/UAS</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>An Unmanned Aerial Vehicle, ground-based controller and communication system.</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="https://w3id.org/landrs/def/ontologies/core/Product">Product</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="UnmannedAerialVehicle">
+        <h3>Unmanned Aerial Vehicle<sup title="class" class="sup-c">c</sup></h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://w3id.org/landrs/def/ontologies/core/UAV</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>An aircraft without a human pilot on board and a type of unmanned vehicle. UAVs are a component of an unmanned aircraft system (UAS); which include a UAV, a ground-based controller, and a system of communications between the two. The flight of UAVs may operate with various degrees of autonomy: either under remote control by a human operator or autonomously by onboard computers.</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="https://w3id.org/landrs/def/ontologies/core/UxV">UxV</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="https://w3id.org/landrs/def/ontologies/core/AerialRobot">AerialRobot</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="https://w3id.org/landrs/def/ontologies/core/MotorizedVehicle">MotorizedVehicle</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="UnmannedAircraftComponent">
+        <h3>Unmanned Aircraft Component<sup title="class" class="sup-c">c</sup></h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://w3id.org/landrs/def/ontologies/core/UAVComponent</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>Component of a Unmanned Aerial Vehicle</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="https://w3id.org/landrs/def/ontologies/core/Component">Component</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="UnmannedSurfaceVehicle">
+        <h3>Unmanned Surface Vehicle<sup title="class" class="sup-c">c</sup></h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://w3id.org/landrs/def/ontologies/core/USV</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>Vehicle that operates on the surface of the water without a crew</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="https://w3id.org/landrs/def/ontologies/core/MotorizedVehicle">MotorizedVehicle</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="https://w3id.org/landrs/def/ontologies/core/SurfaceRobot">SurfaceRobot</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="UnderwaterGlider">
+        <h3>Underwater Glider<sup title="class" class="sup-c">c</sup></h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://w3id.org/landrs/def/ontologies/core/UnderwaterGlider</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>An underwater glider is a type of autonomous underwater vehicle (AUV) that employs variable-buoyancy propulsion instead of traditional propellers or thrusters. It employs variable buoyancy in a similar way to a profiling float, but unlike a float, which can only move up and down, an underwater glider is fitted with hydrofoils (underwater wings) that allow it to glide forward while descending through the water. At a certain depth, the glider switches to positive buoyancy to climb back up, and the cycle is then repeated.</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="https://w3id.org/landrs/def/ontologies/core/AUV">AUV</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="https://w3id.org/landrs/def/ontologies/core/UnmotorizedVehicle">UnmotorizedVehicle</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="UnderwaterRobot1">
+        <h3>Underwater Robot<sup title="class" class="sup-c">c</sup></h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://w3id.org/landrs/def/ontologies/core/UnderwaterRobot</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>Underwater Robots are vehicles that move autonomously underwater.</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="https://w3id.org/landrs/def/ontologies/core/UnderwaterVehicle">UnderwaterVehicle</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="https://w3id.org/landrs/def/ontologies/core/RoboticVehice">RoboticVehice</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>Sub-classes</th>
+                <td>
+                    <a href="https://w3id.org/landrs/def/ontologies/core/AUV">AUV</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="https://w3id.org/landrs/def/ontologies/core/ROV">ROV</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="UnderwaterVehicle">
+        <h3>Underwater Vehicle<sup title="class" class="sup-c">c</sup></h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://w3id.org/landrs/def/ontologies/core/UnderwaterVehicle</code></td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="https://w3id.org/landrs/def/ontologies/core/Vehicle">Vehicle</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>Sub-classes</th>
+                <td>
+                    <a href="https://w3id.org/landrs/def/ontologies/core/UnderwaterRobot">UnderwaterRobot</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="UnmotorizedVehicle">
+        <h3>Unmotorized Vehicle<sup title="class" class="sup-c">c</sup></h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://w3id.org/landrs/def/ontologies/core/UnmotorizedVehicle</code></td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="https://w3id.org/landrs/def/ontologies/core/Vehicle">Vehicle</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>Sub-classes</th>
+                <td>
+                    <a href="https://w3id.org/landrs/def/ontologies/core/Buoy">Buoy</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="https://w3id.org/landrs/def/ontologies/core/UnderwaterGlider">UnderwaterGlider</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="UnmannedVehicle">
+        <h3>Unmanned Vehicle<sup title="class" class="sup-c">c</sup></h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://w3id.org/landrs/def/ontologies/core/UxV</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>An unmanned vehicle or uncrewed vehicle is a vehicle without a person on board. Uncrewed vehicles can either be remote controlled or remote guided vehicles, or they can be autonomous vehicles which are capable of sensing their environment and navigating on their own.</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="https://w3id.org/landrs/def/ontologies/core/Vehicle">Vehicle</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="https://w3id.org/landrs/def/ontologies/core/Agent">Agent</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>Sub-classes</th>
+                <td>
+                    <a href="https://w3id.org/landrs/def/ontologies/core/UAV">UAV</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="UxVOperator">
+        <h3>UxVOperator<sup title="class" class="sup-c">c</sup></h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://w3id.org/landrs/def/ontologies/core/UxVOperator</code></td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="https://w3id.org/landrs/def/ontologies/core/AgentRole">AgentRole</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="Vehicle">
+        <h3>Vehicle<sup title="class" class="sup-c">c</sup></h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://w3id.org/landrs/def/ontologies/core/Vehicle</code></td>
+            </tr>
+            <tr>
+                <th>Is Defined By</th>
+                <td>
+                    https://w3id.org/landrs/def/ontologies/core/
+                </td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    
+                </td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="https://w3id.org/landrs/def/ontologies/core/Product">Product</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>Sub-classes</th>
+                <td>
+                    <a href="https://w3id.org/landrs/def/ontologies/core/MotorizedVehicle">MotorizedVehicle</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="https://w3id.org/landrs/def/ontologies/core/UnmotorizedVehicle">UnmotorizedVehicle</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="https://w3id.org/landrs/def/ontologies/core/SurfaceVehicle">SurfaceVehicle</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="https://w3id.org/landrs/def/ontologies/core/AerialVehicle">AerialVehicle</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="https://w3id.org/landrs/def/ontologies/core/UxV">UxV</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="https://w3id.org/landrs/def/ontologies/core/RoboticVehicle">RoboticVehicle</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="https://w3id.org/landrs/def/ontologies/core/UnderwaterVehicle">UnderwaterVehicle</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="Vessel">
+        <h3>Vessel<sup title="class" class="sup-c">c</sup></h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://w3id.org/landrs/def/ontologies/core/Vessel</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>Vehicle that is a watercraft, boat, or ship. Note: Wikidata definition of vessel includes spaceship this :Vessel is a subClassOf wikidata vessel.</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="https://w3id.org/landrs/def/ontologies/core/SurfaceVehicle">SurfaceVehicle</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="https://w3id.org/landrs/def/ontologies/core/MotorizedVehicle">MotorizedVehicle</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+</section>
+<section id="objectproperties">
+    <h2>Object Properties <span style="float:right; font-size:smaller;"><a href="">&uparrow;</a></span></h2>
+    <ul class="hlist">
+        <li><a href="#location">location</a></li>
+        <li><a href="#providesAgentRole">providesAgentRole</a></li>
+    </ul>
+    <div class="entity property" id="location">
+        <h3>location<sup title="object property" class="sup-op">op</sup></h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://schema.org/location</code></td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="https://w3id.org/landrs/def/ontologies/core/Event">Event</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="https://w3id.org/landrs/def/ontologies/core/Place">Place</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="providesAgentRole">
+        <h3>providesAgentRole<sup title="object property" class="sup-op">op</sup></h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://w3id.org/landrs/def/ontologies/core/providesAgentRole</code></td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="https://w3id.org/landrs/def/ontologies/core/AgentRole">AgentRole</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+</section>
+
+<section id="annotationproperties">
+    <h2>Annotation Properties <span style="float:right; font-size:smaller;"><a href="">&uparrow;</a></span></h2>
+    <ul class="hlist">
+        <li><a href="#isNativeTo">isNativeTo</a></li>
+        <li><a href="#reusesPatternAsTemplate">reusesPatternAsTemplate</a></li>
+        <li><a href="#created">created</a></li>
+        <li><a href="#creator">creator</a></li>
+        <li><a href="#description">description</a></li>
+        <li><a href="#license">license</a></li>
+        <li><a href="#rights">rights</a></li>
+        <li><a href="#title">title</a></li>
+        <li><a href="#preferredNamespacePrefix">preferredNamespacePrefix</a></li>
+        <li><a href="#preferredNamespaceUri">preferredNamespaceUri</a></li>
+        <li><a href="#definition">definition</a></li>
+        <li><a href="#example">example</a></li>
+        <li><a href="#note">note</a></li>
+        <li><a href="#name">name</a></li>
+        <li><a href="#domainIncludes">domainIncludes</a></li>
+        <li><a href="#rangeIncludes">rangeIncludes</a></li>
+        <li><a href="#version">version</a></li>
+    </ul>
+    <div class="entity property" id="isNativeTo">
+        <h3>isNativeTo<sup title="annotation property" class="sup-ap">ap</sup></h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://ontologydesignpatterns.org/opla#isNativeTo</code></td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="reusesPatternAsTemplate">
+        <h3>reusesPatternAsTemplate<sup title="annotation property" class="sup-ap">ap</sup></h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://ontologydesignpatterns.org/opla#reusesPatternAsTemplate</code></td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="created">
+        <h3>created<sup title="annotation property" class="sup-ap">ap</sup></h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://purl.org/dc/terms/created</code></td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="creator">
+        <h3>creator<sup title="annotation property" class="sup-ap">ap</sup></h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://purl.org/dc/terms/creator</code></td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="description">
+        <h3>description<sup title="annotation property" class="sup-ap">ap</sup></h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://purl.org/dc/terms/description</code></td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="license">
+        <h3>license<sup title="annotation property" class="sup-ap">ap</sup></h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://purl.org/dc/terms/license</code></td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="rights">
+        <h3>rights<sup title="annotation property" class="sup-ap">ap</sup></h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://purl.org/dc/terms/rights</code></td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="title">
+        <h3>title<sup title="annotation property" class="sup-ap">ap</sup></h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://purl.org/dc/terms/title</code></td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="preferredNamespacePrefix">
+        <h3>preferredNamespacePrefix<sup title="annotation property" class="sup-ap">ap</sup></h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://purl.org/vocab/vann/preferredNamespacePrefix</code></td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="preferredNamespaceUri">
+        <h3>preferredNamespaceUri<sup title="annotation property" class="sup-ap">ap</sup></h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://purl.org/vocab/vann/preferredNamespaceUri</code></td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="definition">
+        <h3>definition<sup title="annotation property" class="sup-ap">ap</sup></h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://www.w3.org/2004/02/skos/core#definition</code></td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="example">
+        <h3>example<sup title="annotation property" class="sup-ap">ap</sup></h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://www.w3.org/2004/02/skos/core#example</code></td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="note">
+        <h3>note<sup title="annotation property" class="sup-ap">ap</sup></h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://www.w3.org/2004/02/skos/core#note</code></td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="name">
+        <h3>name<sup title="annotation property" class="sup-ap">ap</sup></h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://xmlns.com/foaf/0.1/name</code></td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="domainIncludes">
+        <h3>domainIncludes<sup title="annotation property" class="sup-ap">ap</sup></h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://schema.org/domainIncludes</code></td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="rangeIncludes">
+        <h3>rangeIncludes<sup title="annotation property" class="sup-ap">ap</sup></h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://schema.org/rangeIncludes</code></td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="version">
+        <h3>version<sup title="annotation property" class="sup-ap">ap</sup></h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://schema.org/version</code></td>
+            </tr>
+        </table>
+    </div>
+</section>
+
+<section id="properties">
+    <h2>Properties <span style="float:right; font-size:smaller;"><a href="">&uparrow;</a></span></h2>
+    <ul class="hlist">
+        <li><a href="#bodyType">bodyType</a></li>
+    </ul>
+    <div class="entity property" id="bodyType">
+        <h3>bodyType<sup title="property" class="sup-p">p</sup></h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://w3id.org/landrs/def/ontologies/core/bodyType</code></td>
+            </tr>
+            <tr>
+                <th>Source</th>
+                <td>
+                    <a href="http://www.w3.org/wiki/Websdos/sdoDotOrgSources#Automotive_Ontology_Working_Group">http://www.w3.org/wiki/Websdos/sdoDotOrgSources#Automotive_Ontology_Working_Group</a>
+                </td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    Indicates the design and body style of the vehicle (e.g. quadcopter, glider.
+                </td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    (<a href="https://schema.org/domainIncludes">sdo:domainIncludes</a>)
+                    <a href="https://schema.org/Vehicle">sdo:Vehicle</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    (<a href="https://schema.org/domainIncludes">sdo:rangeIncludes</a>)
+                    <a href="https://schema.org/URL">sdo:URL</a><sup class="sup-c" title="class">c</sup>
+                    <a href="https://schema.org/QualitativeValue">sdo:QualitativeValue</a><sup class="sup-c" title="class">c</sup>
+                    <a href="https://schema.org/Text">sdo:Text</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+</section>
+
+  
+  <section id="namedindividuals">
+    <h2>Named Individuals <span style="float:right; font-size:smaller;"><a href="">&uparrow;</a></span></h2>
+    <ul class="hlist">
+    </ul>
+</section>
+  
+  <section id="namespaces">
+    <h2>Namespaces <span style="float:right; font-size:smaller;"><a href="">&uparrow;</a></span></h2>
+    <dl>
+        <dt>:</dt>
+        <dd><code>https://w3id.org/landrs/def/ontologies/core/</code></dd>
+        <dt>cpo</dt>
+        <dd><code>http://daselab.org/ContextualizedWinstonPartWhole#</code></dd>
+        <dt>dc</dt>
+        <dd><code>http://purl.org/dc/elements/1.1/</code></dd>
+        <dt>dcat</dt>
+        <dd><code>http://www.w3.org/ns/dcat#</code></dd>
+        <dt>dct</dt>
+        <dd><code>http://purl.org/dc/terms/</code></dd>
+        <dt>doap</dt>
+        <dd><code>http://usefulinc.com/ns/doap#</code></dd>
+        <dt>foaf</dt>
+        <dd><code>http://xmlns.com/foaf/0.1/</code></dd>
+        <dt>opla</dt>
+        <dd><code>http://ontologydesignpatterns.org/opla#</code></dd>
+        <dt>owl</dt>
+        <dd><code>http://www.w3.org/2002/07/owl#</code></dd>
+        <dt>po</dt>
+        <dd><code>http://daselab.org/WinstonPartWhole#</code></dd>
+        <dt>prof</dt>
+        <dd><code>http://www.w3.org/ns/dx/prof/</code></dd>
+        <dt>prov</dt>
+        <dd><code>http://www.w3.org/ns/prov#</code></dd>
+        <dt>rdf</dt>
+        <dd><code>http://www.w3.org/1999/02/22-rdf-syntax-ns#</code></dd>
+        <dt>rdfs</dt>
+        <dd><code>http://www.w3.org/2000/01/rdf-schema#</code></dd>
+        <dt>role</dt>
+        <dd><code>http://www.w3.org/ns/dx/prof/role/</code></dd>
+        <dt>sdo</dt>
+        <dd><code>https://schema.org/</code></dd>
+        <dt>skos</dt>
+        <dd><code>http://www.w3.org/2004/02/skos/core#</code></dd>
+        <dt>vann</dt>
+        <dd><code>http://purl.org/vocab/vann/</code></dd>
+        <dt>voaf</dt>
+        <dd><code>http://purl.org/vocommons/voaf#</code></dd>
+        <dt>void</dt>
+        <dd><code>http://rdfs.org/ns/void#</code></dd>
+        <dt>xsd</dt>
+        <dd><code>http://www.w3.org/2001/XMLSchema#</code></dd>
+    </dl>
+</section>
+  <section id="legend">
+      <h2>Legend</h2>
+      <table class="entity">
+          <tr><td><sup class="sup-c" title="Classes">c</sup></td><td>Classes</td></tr>
+          <tr><td><sup class="sup-op" title="Object Properties">op</sup></td><td>Object Properties</td></tr>
+          <tr><td><sup class="sup-fp" title="Functional Properties">fp</sup></td><td>Functional Properties</td></tr>
+          <tr><td><sup class="sup-dp" title="Data Properties">dp</sup></td><td>Data Properties</td></tr>
+          <tr><td><sup class="sup-ap" title="Annotation Properties">dp</sup></td><td>Annotation Properties</td></tr>
+          <tr><td><sup class="sup-p" title="Properties">p</sup></td><td>Properties</td></tr>
+          <tr><td><sup class="sup-ni" title="Named Individuals">ni</sup></td><td>Named Individuals</td></tr>
+      </table>
+  </section>
+</body>
+</html>

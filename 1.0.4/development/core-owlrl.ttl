@@ -1,0 +1,122 @@
+# baseURI: https://w3id.org/landrs/ontologies/ns/core/owlrl/
+# prefix: landrs-core
+
+@prefix : <https://w3id.org/landrs/ns/ontologies/core/> .
+@prefix landrs-core: <https://w3id.org/landrs/ns/ontologies/core/owlrl> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix doap: <http://usefulinc.com/ns/doap#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix opla: <http://ontologydesignpatterns.org/opla#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix prof: <http://www.w3.org/ns/dx/prof/> .
+@prefix role: <http://www.w3.org/ns/dx/prof/role/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sdo: <https://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix voaf: <http://purl.org/vocommons/voaf#> .
+@prefix void: <http://rdfs.org/ns/void#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+@prefix cpo: <http://daselab.org/ContextualizedWinstonPartWhole#> .
+@prefix po: <http://daselab.org/WinstonPartWhole#> .
+
+foaf:Agent a owl:Class .
+foaf:name a owl:AnnotationProperty .
+voaf:Vocabulary a owl:Class .
+dct:title a owl:AnnotationProperty .
+dct:description a owl:AnnotationProperty .
+dct:rights a owl:AnnotationProperty .
+dct:license a owl:AnnotationProperty .
+dct:created a owl:AnnotationProperty .
+dct:creator a owl:AnnotationProperty .
+skos:definition a owl:AnnotationProperty .
+opla:isNativeTo a owl:AnnotationProperty .
+opla:reusesPatternAsTemplate a owl:AnnotationProperty .
+skos:example a owl:AnnotationProperty .
+skos:note a owl:AnnotationProperty .
+vann:preferredNamespacePrefix a owl:AnnotationProperty .
+vann:preferredNamespaceUri a owl:AnnotationProperty .
+sdo:domainIncludes a owl:AnnotationProperty .
+sdo:rangeIncludes a owl:AnnotationProperty .
+sdo:version a owl:AnnotationProperty .
+
+# URI for the fully dereferencable ontology
+: a owl:Ontology , voaf:Vocabulary, prov:Entity, dcat:Dataset ;
+  dct:title "Landrs Core Ontology"@en ;
+  dct:description "This ontology is developed as part of the Sloan Funded LANDRS project to advance UxV data interoperability"@en ;
+   ;
+  dct:rights "Copyright 2020 University of Notre Dame." ;
+  sdo:licnese "https://creativecommons.org/publicdomain/zero/1.0";
+  dct:created "2020-08-12"^^xsd:date ;
+  dct:modified "2020-08-12"^^xsd:date ;
+  sdo:funder [
+    a sdo:Organization ;
+    sdo:name "Alfred P. Sloan Foundation" ;
+    sdo:url "https://sloan.org/"
+  ] ;
+  vann:preferredNamespacePrefix "landrs-core" ;
+  vann:preferredNamespaceUri "https://w3id.org/landrs/ontologies/ns/core/" ;
+  owl:versionInfo "0.0.1" ;
+  sdo:versionInfo "0.0.1" ;
+  prov:wasGeneratedBy [
+        a doap:Project , prov:Activity ;
+        doap:repository <https://github.com/landrs-toolkit/ontologies>
+  ] ;
+  dct:creator [
+        sdo:name "Charles F Vardeman II" ;
+        sdo:identifier <https://orcid.org/0000-0003-4091-6059> ;
+        sdo:email <cvardema@nd.edu> ;
+        sdo:affiliation [
+          sdo:name "University of Notre Dame, Center for Research Computing" ;
+          sdo:url <https://crc.nd.edu> ;
+        ],
+        [
+          sdo:affiliation "LANDRS" ;
+          sdo:url <https://landrs.org>
+        ];
+
+    ] ,
+    [
+        sdo:name "Priscila Moreira " ;
+        sdo:affiliation [
+            sdo:name "University of Notre Dame, Center for Research Computing" ;
+            sdo:url <https://crc.nd.edu> ;
+        ]
+    ] ;
+  prof:isProfileOf <https://w3id.org/landrs/ns/ontologies/> ;
+  prof:hasResource [
+    a prof:ResourceDescriptor, sdo:WebAPI ;
+
+    # it's in Turtle format
+    dct:format <https://w3id.org/mediatype/text/turtle> ;
+
+    # it uses content negotiation schema.org WebAPI spec
+    # https://webapi-discovery.github.io/rfcs/rfc0001.html
+    sdo:contentType "text/turtle" ;
+    sdo:contentType "application/ld+json" ;
+    sdo:contentType "application/n-triples";
+
+    # has a url
+    sdo:url "https://w3id.org/landrs/ontologies/ns/core" ;
+
+    # it conforms to SHACL, here refered to by its namespace URI as a Profile
+    # dct:conformsTo <http://www.w3.org/ns/owl-profile/RL> ;
+    # This core conforms to schema.org
+    dct:conformsTo <http://meta.schema.org> ;
+
+    # this profile resource plays the role of "Validation"
+    # described in this ontology's accompanying Roles vocabulary
+    prof:hasRole role:vocabulary ;
+
+    # this profile resource's actual file
+    # TODO: Correct URI for this resources
+   # prof:hasArtifact <https://w3id.org/landrs/ontologies/core/profile/core.ttl>
+  ] ;
+  owl:imports landrs:core ;
+.
