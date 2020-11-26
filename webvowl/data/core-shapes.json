@@ -1,0 +1,233 @@
+{
+  "_comment" : "Created with OWL2VOWL (version 0.3.7), http://vowl.visualdataweb.org",
+  "header" : {
+    "languages" : [ "en", "undefined" ],
+    "baseIris" : [ "http://www.w3.org/1999/02/22-rdf-syntax-ns", "http://purl.org/vocommons/voaf", "http://usefulinc.com/ns/doap", "http://www.w3.org/2000/01/rdf-schema", "https://schema.org", "http://www.w3.org/ns/prov", "http://www.w3.org/2001/XMLSchema", "http://www.w3.org/ns/dcat", "http://www.w3.org/ns/dx/prof" ],
+    "prefixList" : {
+      "owl" : "http://www.w3.org/2002/07/owl#",
+      "rdf" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+      "vann" : "http://purl.org/vocab/vann/",
+      "doap" : "http://usefulinc.com/ns/doap#",
+      "terms" : "http://purl.org/dc/terms/",
+      "xsd" : "http://www.w3.org/2001/XMLSchema#",
+      "xml" : "http://www.w3.org/XML/1998/namespace",
+      "schema" : "https://schema.org/",
+      "prof" : "http://www.w3.org/ns/dx/prof/",
+      "prov" : "http://www.w3.org/ns/prov#",
+      "rdfs" : "http://www.w3.org/2000/01/rdf-schema#"
+    },
+    "title" : {
+      "en" : "Landrs Core Ontology"
+    },
+    "iri" : "http://www.semanticweb.org/owl/owlapi/turtle#",
+    "version" : "0.0.1",
+    "author" : [ "_:genid14", "_:genid15" ],
+    "description" : {
+      "en" : "This ontology is developed as part of the Sloan Funded LANDRS project to advance UxV data interoperability"
+    },
+    "other" : {
+      "funder" : [ {
+        "identifier" : "funder",
+        "language" : "undefined",
+        "value" : "_:genid3",
+        "type" : "label"
+      } ],
+      "creator" : [ {
+        "identifier" : "creator",
+        "language" : "undefined",
+        "value" : "_:genid15",
+        "type" : "label"
+      }, {
+        "identifier" : "creator",
+        "language" : "undefined",
+        "value" : "_:genid14",
+        "type" : "label"
+      } ],
+      "isProfileOf" : [ {
+        "identifier" : "isProfileOf",
+        "language" : "undefined",
+        "value" : "https://w3id.org/landrs/ns/ontologies/",
+        "type" : "iri"
+      } ],
+      "created" : [ {
+        "identifier" : "created",
+        "language" : "undefined",
+        "value" : "2020-08-12",
+        "type" : "label"
+      } ],
+      "hasResource" : [ {
+        "identifier" : "hasResource",
+        "language" : "undefined",
+        "value" : "_:genid1",
+        "type" : "label"
+      } ],
+      "versionInfo" : [ {
+        "identifier" : "versionInfo",
+        "language" : "undefined",
+        "value" : "0.0.1",
+        "type" : "label"
+      }, {
+        "identifier" : "versionInfo",
+        "language" : "undefined",
+        "value" : "0.0.1",
+        "type" : "label"
+      } ],
+      "title" : [ {
+        "identifier" : "title",
+        "language" : "en",
+        "value" : "Landrs Core Ontology",
+        "type" : "label"
+      } ],
+      "wasGeneratedBy" : [ {
+        "identifier" : "wasGeneratedBy",
+        "language" : "undefined",
+        "value" : "_:genid2",
+        "type" : "label"
+      } ],
+      "preferredNamespacePrefix" : [ {
+        "identifier" : "preferredNamespacePrefix",
+        "language" : "undefined",
+        "value" : "landrs-core",
+        "type" : "label"
+      } ],
+      "rights" : [ {
+        "identifier" : "rights",
+        "language" : "undefined",
+        "value" : "Copyright 2020 University of Notre Dame.",
+        "type" : "label"
+      } ],
+      "modified" : [ {
+        "identifier" : "modified",
+        "language" : "undefined",
+        "value" : "2020-08-12",
+        "type" : "label"
+      } ],
+      "preferredNamespaceUri" : [ {
+        "identifier" : "preferredNamespaceUri",
+        "language" : "undefined",
+        "value" : "https://w3id.org/landrs/ontologies/ns/core/",
+        "type" : "label"
+      } ],
+      "licnese" : [ {
+        "identifier" : "licnese",
+        "language" : "undefined",
+        "value" : "https://creativecommons.org/publicdomain/zero/1.0",
+        "type" : "label"
+      } ]
+    }
+  },
+  "namespace" : [ ],
+  "class" : [ {
+    "id" : "0",
+    "type" : "owl:Class"
+  }, {
+    "id" : "1",
+    "type" : "owl:Class"
+  }, {
+    "id" : "2",
+    "type" : "owl:Class"
+  }, {
+    "id" : "3",
+    "type" : "owl:Class"
+  }, {
+    "id" : "4",
+    "type" : "owl:Class"
+  }, {
+    "id" : "5",
+    "type" : "owl:Class"
+  }, {
+    "id" : "6",
+    "type" : "owl:Class"
+  }, {
+    "id" : "7",
+    "type" : "owl:Class"
+  } ],
+  "classAttribute" : [ {
+    "iri" : "http://www.w3.org/ns/prov#Entity",
+    "baseIri" : "http://www.w3.org/ns/prov",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Entity"
+    },
+    "individuals" : [ {
+      "iri" : "http://www.semanticweb.org/owl/owlapi/turtle#",
+      "baseIri" : "http://www.semanticweb.org/owl/owlapi/turtle",
+      "labels" : { }
+    } ],
+    "attributes" : [ "external" ],
+    "id" : "0"
+  }, {
+    "iri" : "http://www.w3.org/ns/prov#Activity",
+    "baseIri" : "http://www.w3.org/ns/prov",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Activity"
+    },
+    "attributes" : [ "external" ],
+    "id" : "1"
+  }, {
+    "iri" : "https://schema.org/Organization",
+    "baseIri" : "https://schema.org",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Organization"
+    },
+    "attributes" : [ "external" ],
+    "id" : "2"
+  }, {
+    "iri" : "https://schema.org/WebAPI",
+    "baseIri" : "https://schema.org",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "WebAPI"
+    },
+    "attributes" : [ "external" ],
+    "id" : "3"
+  }, {
+    "iri" : "http://usefulinc.com/ns/doap#Project",
+    "baseIri" : "http://usefulinc.com/ns/doap",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Project"
+    },
+    "attributes" : [ "external" ],
+    "id" : "4"
+  }, {
+    "iri" : "http://www.w3.org/ns/dcat#Dataset",
+    "baseIri" : "http://www.w3.org/ns/dcat",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Dataset"
+    },
+    "individuals" : [ {
+      "iri" : "http://www.semanticweb.org/owl/owlapi/turtle#",
+      "baseIri" : "http://www.semanticweb.org/owl/owlapi/turtle",
+      "labels" : { }
+    } ],
+    "attributes" : [ "external" ],
+    "id" : "5"
+  }, {
+    "iri" : "http://purl.org/vocommons/voaf#Vocabulary",
+    "baseIri" : "http://purl.org/vocommons/voaf",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Vocabulary"
+    },
+    "individuals" : [ {
+      "iri" : "http://www.semanticweb.org/owl/owlapi/turtle#",
+      "baseIri" : "http://www.semanticweb.org/owl/owlapi/turtle",
+      "labels" : { }
+    } ],
+    "attributes" : [ "external" ],
+    "id" : "6"
+  }, {
+    "iri" : "http://www.w3.org/ns/dx/prof/ResourceDescriptor",
+    "baseIri" : "http://www.w3.org/ns/dx/prof",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "ResourceDescriptor"
+    },
+    "attributes" : [ "external" ],
+    "id" : "7"
+  } ]
+}
