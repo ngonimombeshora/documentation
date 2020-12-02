@@ -21,7 +21,7 @@
         <terms:creator>
             <rdf:Description>
                 <schema:name>Charles F Vardeman II</schema:name>
-                <schema:email rdf:resource="file:/home/ngonidzashe/Documents/LANDRS/documentation/1.0.4/cvardema@nd.edu"/>
+                <schema:email rdf:resource="file:/home/runner/work/documentation/documentation/1.0.4/cvardema@nd.edu"/>
                 <schema:affiliation>
                     <rdf:Description>
                         <schema:affiliation>LANDRS</schema:affiliation>
@@ -1208,7 +1208,7 @@
                 <schema:url rdf:resource="https://landrs.org"/>
             </rdf:Description>
         </schema:affiliation>
-        <schema:email rdf:resource="file:/home/ngonidzashe/Documents/LANDRS/documentation/1.0.4/cvardema@nd.edu"/>
+        <schema:email rdf:resource="file:/home/runner/work/documentation/documentation/1.0.4/cvardema@nd.edu"/>
         <schema:identifier rdf:resource="https://orcid.org/0000-0003-4091-6059"/>
         <schema:name>Charles F Vardeman II</schema:name>
     </rdf:Description>
@@ -1248,8 +1248,8 @@
         <rdfs:label>UxVOperator</rdfs:label>
     </rdf:Description>
     <rdf:Description rdf:about="https://w3id.org/landrs/def/ontologies/core/bodyType">
-        <schema:domainIncludes rdf:resource="https://schema.org/Vehicle"/>
         <terms:source rdf:resource="http://www.w3.org/wiki/Websdos/sdoDotOrgSources#Automotive_Ontology_Working_Group"/>
+        <schema:domainIncludes rdf:resource="https://schema.org/Vehicle"/>
         <rdfs:label xml:lang="en">bodyType</rdfs:label>
         <schema:rangeIncludes rdf:resource="https://schema.org/Text"/>
         <rdfs:comment xml:lang="en">Indicates the design and body style of the vehicle (e.g. quadcopter, glider.</rdfs:comment>

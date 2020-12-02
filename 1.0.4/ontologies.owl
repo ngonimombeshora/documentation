@@ -19,7 +19,7 @@
         <terms:creator rdf:resource="https://w3id.org/landrs/def/landrs/"/>
         <terms:creator>
             <rdf:Description>
-                <schema:email rdf:resource="file:/home/ngonidzashe/Documents/LANDRS/documentation/1.0.4/cvardema@nd.edu"/>
+                <schema:email rdf:resource="file:/home/runner/work/documentation/documentation/1.0.4/cvardema@nd.edu"/>
                 <schema:affiliation>
                     <rdf:Description>
                         <schema:name>LANDRS</schema:name>
@@ -330,7 +330,7 @@
                 <schema:url rdf:resource="https://landrs.org"/>
             </rdf:Description>
         </schema:affiliation>
-        <schema:email rdf:resource="file:/home/ngonidzashe/Documents/LANDRS/documentation/1.0.4/cvardema@nd.edu"/>
+        <schema:email rdf:resource="file:/home/runner/work/documentation/documentation/1.0.4/cvardema@nd.edu"/>
         <schema:identifier rdf:resource="https://orcid.org/0000-0003-4091-6059"/>
         <schema:name>Charles F Vardeman II</schema:name>
     </rdf:Description>
