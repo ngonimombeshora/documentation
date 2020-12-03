@@ -21,7 +21,7 @@
     },
     "iri" : "http://www.semanticweb.org/owl/owlapi/turtle#",
     "version" : "0.0.1",
-    "author" : [ "_:genid14", "_:genid15" ],
+    "author" : [ "_:genid13", "_:genid16" ],
     "description" : {
       "en" : "This ontology is developed as part of the Sloan Funded LANDRS project to advance UxV data interoperability"
     },
@@ -29,18 +29,18 @@
       "funder" : [ {
         "identifier" : "funder",
         "language" : "undefined",
-        "value" : "_:genid3",
+        "value" : "_:genid2",
         "type" : "label"
       } ],
       "creator" : [ {
         "identifier" : "creator",
         "language" : "undefined",
-        "value" : "_:genid15",
+        "value" : "_:genid16",
         "type" : "label"
       }, {
         "identifier" : "creator",
         "language" : "undefined",
-        "value" : "_:genid14",
+        "value" : "_:genid13",
         "type" : "label"
       } ],
       "isProfileOf" : [ {
@@ -81,19 +81,19 @@
       "wasGeneratedBy" : [ {
         "identifier" : "wasGeneratedBy",
         "language" : "undefined",
-        "value" : "_:genid2",
-        "type" : "label"
-      } ],
-      "preferredNamespacePrefix" : [ {
-        "identifier" : "preferredNamespacePrefix",
-        "language" : "undefined",
-        "value" : "landrs-core",
+        "value" : "_:genid5",
         "type" : "label"
       } ],
       "rights" : [ {
         "identifier" : "rights",
         "language" : "undefined",
         "value" : "Copyright 2020 University of Notre Dame.",
+        "type" : "label"
+      } ],
+      "preferredNamespacePrefix" : [ {
+        "identifier" : "preferredNamespacePrefix",
+        "language" : "undefined",
+        "value" : "landrs-core",
         "type" : "label"
       } ],
       "modified" : [ {
@@ -157,20 +157,20 @@
     "attributes" : [ "external" ],
     "id" : "0"
   }, {
-    "iri" : "http://www.w3.org/ns/prov#Activity",
-    "baseIri" : "http://www.w3.org/ns/prov",
-    "instances" : 0,
-    "label" : {
-      "IRI-based" : "Activity"
-    },
-    "attributes" : [ "external" ],
-    "id" : "1"
-  }, {
     "iri" : "https://schema.org/Organization",
     "baseIri" : "https://schema.org",
     "instances" : 0,
     "label" : {
       "IRI-based" : "Organization"
+    },
+    "attributes" : [ "external" ],
+    "id" : "1"
+  }, {
+    "iri" : "http://www.w3.org/ns/prov#Activity",
+    "baseIri" : "http://www.w3.org/ns/prov",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Activity"
     },
     "attributes" : [ "external" ],
     "id" : "2"
