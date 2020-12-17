@@ -55,8 +55,8 @@
             <rdf:Description>
                 <schema:contentType>text/turtle</schema:contentType>
                 <terms:conformsTo rdf:resource="https://www.w3.org/TR/shacl/"/>
-                <terms:format rdf:resource="https://w3id.org/mediatype/text/turtle"/>
                 <prof:hasRole rdf:resource="http://www.w3.org/ns/dx/prof/role/validation"/>
+                <terms:format rdf:resource="https://w3id.org/mediatype/text/turtle"/>
                 <rdf:type rdf:resource="http://www.w3.org/ns/dx/prof/ResourceDescriptor"/>
                 <rdf:type rdf:resource="https://schema.org/WebAPI"/>
                 <schema:contentType>application/ld+json</schema:contentType>

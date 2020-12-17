@@ -24,7 +24,7 @@
     },
     "iri" : "https://w3id.org/landrs/def/ontologies/core/",
     "version" : "0.0.1",
-    "author" : [ "_:genid37", "_:genid32" ],
+    "author" : [ "_:genid33", "_:genid37" ],
     "description" : {
       "en" : "This ontology is developed as part of the Sloan Funded LANDRS project to advance UxV data interoperability"
     },
@@ -32,18 +32,24 @@
       "funder" : [ {
         "identifier" : "funder",
         "language" : "undefined",
-        "value" : "_:genid7",
+        "value" : "_:genid1",
         "type" : "label"
       } ],
       "creator" : [ {
         "identifier" : "creator",
         "language" : "undefined",
-        "value" : "_:genid32",
+        "value" : "_:genid37",
         "type" : "label"
       }, {
         "identifier" : "creator",
         "language" : "undefined",
-        "value" : "_:genid37",
+        "value" : "_:genid33",
+        "type" : "label"
+      } ],
+      "created" : [ {
+        "identifier" : "created",
+        "language" : "undefined",
+        "value" : "2020-08-12",
         "type" : "label"
       } ],
       "isProfileOf" : [ {
@@ -52,16 +58,10 @@
         "value" : "https://w3id.org/landrs/ns/ontologies/",
         "type" : "iri"
       } ],
-      "created" : [ {
-        "identifier" : "created",
-        "language" : "undefined",
-        "value" : "2020-08-12",
-        "type" : "label"
-      } ],
       "hasResource" : [ {
         "identifier" : "hasResource",
         "language" : "undefined",
-        "value" : "_:genid8",
+        "value" : "_:genid9",
         "type" : "label"
       } ],
       "versionInfo" : [ {
@@ -84,13 +84,7 @@
       "wasGeneratedBy" : [ {
         "identifier" : "wasGeneratedBy",
         "language" : "undefined",
-        "value" : "_:genid27",
-        "type" : "label"
-      } ],
-      "preferredNamespacePrefix" : [ {
-        "identifier" : "preferredNamespacePrefix",
-        "language" : "undefined",
-        "value" : "landrs-core",
+        "value" : "_:genid19",
         "type" : "label"
       } ],
       "rights" : [ {
@@ -99,22 +93,28 @@
         "value" : "Copyright 2020 University of Notre Dame.",
         "type" : "label"
       } ],
+      "preferredNamespacePrefix" : [ {
+        "identifier" : "preferredNamespacePrefix",
+        "language" : "undefined",
+        "value" : "landrs-core",
+        "type" : "label"
+      } ],
       "modified" : [ {
         "identifier" : "modified",
         "language" : "undefined",
         "value" : "2020-08-12",
         "type" : "label"
       } ],
-      "licnese" : [ {
-        "identifier" : "licnese",
-        "language" : "undefined",
-        "value" : "https://creativecommons.org/publicdomain/zero/1.0",
-        "type" : "label"
-      } ],
       "preferredNamespaceUri" : [ {
         "identifier" : "preferredNamespaceUri",
         "language" : "undefined",
         "value" : "https://w3id.org/landrs/ontologies/ns/core/",
+        "type" : "label"
+      } ],
+      "licnese" : [ {
+        "identifier" : "licnese",
+        "language" : "undefined",
+        "value" : "https://creativecommons.org/publicdomain/zero/1.0",
         "type" : "label"
       } ]
     }
@@ -220,10 +220,10 @@
     "id" : "39",
     "type" : "owl:Class"
   }, {
-    "id" : "25",
+    "id" : "19",
     "type" : "owl:Class"
   }, {
-    "id" : "19",
+    "id" : "25",
     "type" : "owl:Class"
   }, {
     "id" : "22",
@@ -301,10 +301,10 @@
     "id" : "37",
     "type" : "owl:Class"
   }, {
-    "id" : "71",
+    "id" : "61",
     "type" : "owl:Class"
   }, {
-    "id" : "61",
+    "id" : "71",
     "type" : "owl:Class"
   }, {
     "id" : "65",
@@ -324,7 +324,7 @@
       "wasDerivedFrom" : [ {
         "identifier" : "wasDerivedFrom",
         "language" : "undefined",
-        "value" : "_:genid10",
+        "value" : "_:genid2",
         "type" : "label"
       } ]
     },
@@ -372,7 +372,7 @@
       "wasDerivedFrom" : [ {
         "identifier" : "wasDerivedFrom",
         "language" : "undefined",
-        "value" : "_:genid5",
+        "value" : "_:genid24",
         "type" : "label"
       } ]
     },
@@ -411,7 +411,7 @@
       "isPartOf" : [ {
         "identifier" : "isPartOf",
         "language" : "undefined",
-        "value" : "_:genid24",
+        "value" : "_:genid23",
         "type" : "label"
       } ]
     },
@@ -430,16 +430,16 @@
     "baseIri" : "https://w3id.org/landrs/def/ontologies/core",
     "instances" : 0,
     "annotations" : {
+      "wasDerivedFrom" : [ {
+        "identifier" : "wasDerivedFrom",
+        "language" : "undefined",
+        "value" : "_:genid12",
+        "type" : "label"
+      } ],
       "altLabel" : [ {
         "identifier" : "altLabel",
         "language" : "en",
         "value" : "AUV",
-        "type" : "label"
-      } ],
-      "wasDerivedFrom" : [ {
-        "identifier" : "wasDerivedFrom",
-        "language" : "undefined",
-        "value" : "_:genid6",
         "type" : "label"
       } ]
     },
@@ -461,7 +461,7 @@
       "wasDerivedFrom" : [ {
         "identifier" : "wasDerivedFrom",
         "language" : "undefined",
-        "value" : "_:genid14",
+        "value" : "_:genid11",
         "type" : "label"
       } ],
       "source" : [ {
@@ -488,7 +488,7 @@
       "wasDerivedFrom" : [ {
         "identifier" : "wasDerivedFrom",
         "language" : "undefined",
-        "value" : "_:genid21",
+        "value" : "_:genid29",
         "type" : "label"
       } ]
     },
@@ -534,16 +534,16 @@
     "baseIri" : "https://w3id.org/landrs/def/ontologies/core",
     "instances" : 0,
     "annotations" : {
+      "wasDerivedFrom" : [ {
+        "identifier" : "wasDerivedFrom",
+        "language" : "undefined",
+        "value" : "_:genid4",
+        "type" : "label"
+      } ],
       "altLabel" : [ {
         "identifier" : "altLabel",
         "language" : "en",
         "value" : "USV",
-        "type" : "label"
-      } ],
-      "wasDerivedFrom" : [ {
-        "identifier" : "wasDerivedFrom",
-        "language" : "undefined",
-        "value" : "_:genid1",
         "type" : "label"
       } ]
     },
@@ -693,7 +693,7 @@
       "isPartOf" : [ {
         "identifier" : "isPartOf",
         "language" : "undefined",
-        "value" : "_:genid16",
+        "value" : "_:genid13",
         "type" : "label"
       } ]
     },
@@ -788,7 +788,7 @@
       "isPartOf" : [ {
         "identifier" : "isPartOf",
         "language" : "undefined",
-        "value" : "_:genid29",
+        "value" : "_:genid27",
         "type" : "label"
       } ]
     },
@@ -797,7 +797,9 @@
       "en" : "Payload"
     },
     "subClasses" : [ "56" ],
-    "comment" : { },
+    "comment" : {
+      "en" : "Unmanned vehicle payload"
+    },
     "id" : "57"
   }, {
     "iri" : "https://w3id.org/landrs/def/ontologies/core/Agent",
@@ -817,7 +819,7 @@
       "wasDerivedFrom" : [ {
         "identifier" : "wasDerivedFrom",
         "language" : "undefined",
-        "value" : "_:genid3",
+        "value" : "_:genid18",
         "type" : "label"
       } ]
     },
@@ -838,7 +840,7 @@
       "wasDerivedFrom" : [ {
         "identifier" : "wasDerivedFrom",
         "language" : "undefined",
-        "value" : "_:genid11",
+        "value" : "_:genid30",
         "type" : "label"
       } ]
     },
@@ -857,16 +859,16 @@
     "baseIri" : "https://w3id.org/landrs/def/ontologies/core",
     "instances" : 0,
     "annotations" : {
-      "wasDerivedFrom" : [ {
-        "identifier" : "wasDerivedFrom",
-        "language" : "undefined",
-        "value" : "_:genid18",
-        "type" : "label"
-      } ],
       "altLabel" : [ {
         "identifier" : "altLabel",
         "language" : "en",
         "value" : "ROV",
+        "type" : "label"
+      } ],
+      "wasDerivedFrom" : [ {
+        "identifier" : "wasDerivedFrom",
+        "language" : "undefined",
+        "value" : "_:genid26",
         "type" : "label"
       } ]
     },
@@ -884,7 +886,7 @@
       "wasDerivedFrom" : [ {
         "identifier" : "wasDerivedFrom",
         "language" : "undefined",
-        "value" : "_:genid13",
+        "value" : "_:genid22",
         "type" : "label"
       } ]
     },
@@ -916,7 +918,7 @@
       "wasDerivedFrom" : [ {
         "identifier" : "wasDerivedFrom",
         "language" : "undefined",
-        "value" : "_:genid9",
+        "value" : "_:genid17",
         "type" : "label"
       } ]
     },
@@ -927,25 +929,6 @@
     "id" : "39",
     "superClasses" : [ "38" ]
   }, {
-    "iri" : "https://w3id.org/landrs/def/ontologies/core/MotorizedVehicle",
-    "baseIri" : "https://w3id.org/landrs/def/ontologies/core",
-    "instances" : 0,
-    "annotations" : {
-      "wasDerivedFrom" : [ {
-        "identifier" : "wasDerivedFrom",
-        "language" : "undefined",
-        "value" : "_:genid23",
-        "type" : "label"
-      } ]
-    },
-    "label" : {
-      "IRI-based" : "MotorizedVehicle",
-      "en" : "Motorized Vehicle"
-    },
-    "subClasses" : [ "28", "95", "51", "37" ],
-    "id" : "25",
-    "superClasses" : [ "2" ]
-  }, {
     "iri" : "https://w3id.org/landrs/def/ontologies/core/AutonomousRobot",
     "baseIri" : "https://w3id.org/landrs/def/ontologies/core",
     "instances" : 0,
@@ -953,7 +936,7 @@
       "wasDerivedFrom" : [ {
         "identifier" : "wasDerivedFrom",
         "language" : "undefined",
-        "value" : "_:genid2",
+        "value" : "_:genid10",
         "type" : "label"
       } ]
     },
@@ -967,6 +950,25 @@
     },
     "id" : "19",
     "superClasses" : [ "38" ]
+  }, {
+    "iri" : "https://w3id.org/landrs/def/ontologies/core/MotorizedVehicle",
+    "baseIri" : "https://w3id.org/landrs/def/ontologies/core",
+    "instances" : 0,
+    "annotations" : {
+      "wasDerivedFrom" : [ {
+        "identifier" : "wasDerivedFrom",
+        "language" : "undefined",
+        "value" : "_:genid16",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "MotorizedVehicle",
+      "en" : "Motorized Vehicle"
+    },
+    "subClasses" : [ "28", "95", "51", "37" ],
+    "id" : "25",
+    "superClasses" : [ "2" ]
   }, {
     "iri" : "https://w3id.org/landrs/def/ontologies/core/Researcher",
     "baseIri" : "https://w3id.org/landrs/def/ontologies/core",
@@ -1004,7 +1006,7 @@
       "isPartOf" : [ {
         "identifier" : "isPartOf",
         "language" : "undefined",
-        "value" : "_:genid15",
+        "value" : "_:genid21",
         "type" : "label"
       } ]
     },
@@ -1025,7 +1027,7 @@
       "wasDerivedFrom" : [ {
         "identifier" : "wasDerivedFrom",
         "language" : "undefined",
-        "value" : "_:genid25",
+        "value" : "_:genid5",
         "type" : "label"
       } ]
     },
@@ -1044,7 +1046,7 @@
       "wasDerivedFrom" : [ {
         "identifier" : "wasDerivedFrom",
         "language" : "undefined",
-        "value" : "_:genid19",
+        "value" : "_:genid7",
         "type" : "label"
       } ]
     },
@@ -1097,7 +1099,7 @@
       "isPartOf" : [ {
         "identifier" : "isPartOf",
         "language" : "undefined",
-        "value" : "_:genid30",
+        "value" : "_:genid25",
         "type" : "label"
       } ],
       "seeAlso" : [ {
@@ -1153,7 +1155,7 @@
       "isPartOf" : [ {
         "identifier" : "isPartOf",
         "language" : "undefined",
-        "value" : "_:genid12",
+        "value" : "_:genid20",
         "type" : "label"
       } ],
       "seeAlso" : [ {
@@ -1200,7 +1202,7 @@
       "wasDerivedFrom" : [ {
         "identifier" : "wasDerivedFrom",
         "language" : "undefined",
-        "value" : "_:genid26",
+        "value" : "_:genid14",
         "type" : "label"
       } ]
     },
@@ -1291,16 +1293,16 @@
     "baseIri" : "https://w3id.org/landrs/def/ontologies/core",
     "instances" : 0,
     "annotations" : {
-      "wasDerivedFrom" : [ {
-        "identifier" : "wasDerivedFrom",
-        "language" : "undefined",
-        "value" : "_:genid4",
-        "type" : "label"
-      } ],
       "altLabel" : [ {
         "identifier" : "altLabel",
         "language" : "undefined",
         "value" : "ASV",
+        "type" : "label"
+      } ],
+      "wasDerivedFrom" : [ {
+        "identifier" : "wasDerivedFrom",
+        "language" : "undefined",
+        "value" : "_:genid6",
         "type" : "label"
       } ]
     },
@@ -1343,7 +1345,7 @@
       "wasDerivedFrom" : [ {
         "identifier" : "wasDerivedFrom",
         "language" : "undefined",
-        "value" : "_:genid17",
+        "value" : "_:genid15",
         "type" : "label"
       } ]
     },
@@ -1405,6 +1407,16 @@
     "id" : "37",
     "superClasses" : [ "27", "63", "25" ]
   }, {
+    "iri" : "https://schema.org/Place",
+    "baseIri" : "https://schema.org",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Place"
+    },
+    "subClasses" : [ "60" ],
+    "attributes" : [ "external" ],
+    "id" : "61"
+  }, {
     "iri" : "https://w3id.org/landrs/def/ontologies/core/UAS",
     "baseIri" : "https://w3id.org/landrs/def/ontologies/core",
     "instances" : 0,
@@ -1431,16 +1443,6 @@
     },
     "id" : "71",
     "superClasses" : [ "17" ]
-  }, {
-    "iri" : "https://schema.org/Place",
-    "baseIri" : "https://schema.org",
-    "instances" : 0,
-    "label" : {
-      "IRI-based" : "Place"
-    },
-    "subClasses" : [ "60" ],
-    "attributes" : [ "external" ],
-    "id" : "61"
   }, {
     "iri" : "https://schema.org/Product",
     "baseIri" : "https://schema.org",
@@ -1921,33 +1923,33 @@
     "attributes" : [ "anonymous", "object" ],
     "id" : "111"
   }, {
-    "range" : "25",
-    "domain" : "28",
+    "range" : "19",
+    "domain" : "80",
     "attributes" : [ "anonymous", "object" ],
     "id" : "113"
   }, {
-    "range" : "25",
-    "domain" : "95",
+    "range" : "19",
+    "domain" : "4",
     "attributes" : [ "anonymous", "object" ],
     "id" : "114"
   }, {
     "range" : "25",
-    "domain" : "51",
+    "domain" : "28",
     "attributes" : [ "anonymous", "object" ],
     "id" : "115"
   }, {
     "range" : "25",
-    "domain" : "37",
+    "domain" : "95",
     "attributes" : [ "anonymous", "object" ],
     "id" : "116"
   }, {
-    "range" : "19",
-    "domain" : "80",
+    "range" : "25",
+    "domain" : "51",
     "attributes" : [ "anonymous", "object" ],
     "id" : "117"
   }, {
-    "range" : "19",
-    "domain" : "4",
+    "range" : "25",
+    "domain" : "37",
     "attributes" : [ "anonymous", "object" ],
     "id" : "118"
   }, {

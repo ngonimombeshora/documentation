@@ -23,7 +23,7 @@
     },
     "iri" : "https://w3id.org/landrs/def/ontologies/",
     "version" : "0.0.1",
-    "author" : [ "_:genid25", "https://w3id.org/landrs/def/landrs/", "_:genid10" ],
+    "author" : [ "_:genid25", "_:genid13", "https://w3id.org/landrs/def/landrs/" ],
     "description" : {
       "en" : "This ontology is developed as part of the Sloan Funded LANDRS project to advance UxV data interoperability"
     },
@@ -31,18 +31,18 @@
       "funder" : [ {
         "identifier" : "funder",
         "language" : "undefined",
-        "value" : "_:genid3",
+        "value" : "_:genid5",
         "type" : "label"
       } ],
       "creator" : [ {
         "identifier" : "creator",
         "language" : "undefined",
-        "value" : "_:genid10",
+        "value" : "_:genid25",
         "type" : "label"
       }, {
         "identifier" : "creator",
         "language" : "undefined",
-        "value" : "_:genid25",
+        "value" : "_:genid13",
         "type" : "label"
       }, {
         "identifier" : "creator",
@@ -62,33 +62,39 @@
         "value" : "2020-08-12",
         "type" : "label"
       } ],
-      "rights" : [ {
-        "identifier" : "rights",
-        "language" : "undefined",
-        "value" : "Copyright 2020 University of Notre Dame.",
-        "type" : "label"
-      } ],
       "preferredNamespacePrefix" : [ {
         "identifier" : "preferredNamespacePrefix",
         "language" : "undefined",
         "value" : "landrs",
         "type" : "label"
       } ],
+      "rights" : [ {
+        "identifier" : "rights",
+        "language" : "undefined",
+        "value" : "Copyright 2020 University of Notre Dame.",
+        "type" : "label"
+      } ],
       "hasResource" : [ {
         "identifier" : "hasResource",
         "language" : "undefined",
-        "value" : "_:genid2",
+        "value" : "_:genid3",
         "type" : "label"
       }, {
         "identifier" : "hasResource",
         "language" : "undefined",
-        "value" : "_:genid5",
+        "value" : "_:genid7",
         "type" : "label"
       } ],
       "modified" : [ {
         "identifier" : "modified",
         "language" : "undefined",
         "value" : "2020-08-25",
+        "type" : "label"
+      } ],
+      "preferredNamespaceUri" : [ {
+        "identifier" : "preferredNamespaceUri",
+        "language" : "undefined",
+        "value" : "https://w3id.org/landrs/ontologies/def/ontologies/",
         "type" : "label"
       } ],
       "versionInfo" : [ {
@@ -106,12 +112,6 @@
         "identifier" : "licnese",
         "language" : "undefined",
         "value" : "https://creativecommons.org/publicdomain/zero/1.0",
-        "type" : "label"
-      } ],
-      "preferredNamespaceUri" : [ {
-        "identifier" : "preferredNamespaceUri",
-        "language" : "undefined",
-        "value" : "https://w3id.org/landrs/ontologies/def/ontologies/",
         "type" : "label"
       } ],
       "title" : [ {
@@ -149,6 +149,24 @@
     "type" : "owl:Class"
   } ],
   "classAttribute" : [ {
+    "iri" : "https://schema.org/Organization",
+    "baseIri" : "https://schema.org",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Organization"
+    },
+    "attributes" : [ "external" ],
+    "id" : "0"
+  }, {
+    "iri" : "http://www.w3.org/ns/prov#Activity",
+    "baseIri" : "http://www.w3.org/ns/prov",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Activity"
+    },
+    "attributes" : [ "external" ],
+    "id" : "1"
+  }, {
     "iri" : "http://www.w3.org/ns/prov#Entity",
     "baseIri" : "http://www.w3.org/ns/prov",
     "instances" : 0,
@@ -160,24 +178,6 @@
       "baseIri" : "https://w3id.org/landrs/def",
       "labels" : { }
     } ],
-    "attributes" : [ "external" ],
-    "id" : "0"
-  }, {
-    "iri" : "https://schema.org/Organization",
-    "baseIri" : "https://schema.org",
-    "instances" : 0,
-    "label" : {
-      "IRI-based" : "Organization"
-    },
-    "attributes" : [ "external" ],
-    "id" : "1"
-  }, {
-    "iri" : "http://www.w3.org/ns/prov#Activity",
-    "baseIri" : "http://www.w3.org/ns/prov",
-    "instances" : 0,
-    "label" : {
-      "IRI-based" : "Activity"
-    },
     "attributes" : [ "external" ],
     "id" : "2"
   }, {

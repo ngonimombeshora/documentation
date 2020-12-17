@@ -57,7 +57,6 @@
         <owl:versionInfo>0.0.1</owl:versionInfo>
         <prof:hasResource>
             <rdf:Description>
-                <schema:url>https://w3id.org/landrs/ontologies/ns/core</schema:url>
                 <rdf:type rdf:resource="http://www.w3.org/ns/dx/prof/ResourceDescriptor"/>
                 <rdf:type rdf:resource="https://schema.org/WebAPI"/>
                 <terms:conformsTo rdf:resource="http://meta.schema.org"/>
@@ -66,6 +65,7 @@
                 <schema:contentType>application/ld+json</schema:contentType>
                 <schema:contentType>application/n-triples</schema:contentType>
                 <schema:contentType>text/turtle</schema:contentType>
+                <schema:url>https://w3id.org/landrs/ontologies/ns/core</schema:url>
             </rdf:Description>
         </prof:hasResource>
         <prof:isProfileOf rdf:resource="https://w3id.org/landrs/ns/ontologies/"/>
