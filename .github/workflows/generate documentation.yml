@@ -40,4 +40,7 @@ jobs:
         uses: ad-m/github-push-action@master
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-#push to gh-pages branch
+      #push to gh-pages branch
+      # create release
+      - name: Create a Release
+        uses: actions/create-release@v1
