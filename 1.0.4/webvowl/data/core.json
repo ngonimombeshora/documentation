@@ -24,7 +24,7 @@
     },
     "iri" : "https://w3id.org/landrs/def/ontologies/core/",
     "version" : "0.0.1",
-    "author" : [ "_:genid34", "_:genid38" ],
+    "author" : [ "_:genid36", "_:genid32" ],
     "description" : {
       "en" : "This ontology is developed as part of the Sloan Funded LANDRS project to advance UxV data interoperability"
     },
@@ -32,18 +32,18 @@
       "funder" : [ {
         "identifier" : "funder",
         "language" : "undefined",
-        "value" : "_:genid27",
+        "value" : "_:genid17",
         "type" : "label"
       } ],
       "creator" : [ {
         "identifier" : "creator",
         "language" : "undefined",
-        "value" : "_:genid34",
+        "value" : "_:genid32",
         "type" : "label"
       }, {
         "identifier" : "creator",
         "language" : "undefined",
-        "value" : "_:genid38",
+        "value" : "_:genid36",
         "type" : "label"
       } ],
       "isProfileOf" : [ {
@@ -84,7 +84,7 @@
       "wasGeneratedBy" : [ {
         "identifier" : "wasGeneratedBy",
         "language" : "undefined",
-        "value" : "_:genid13",
+        "value" : "_:genid20",
         "type" : "label"
       } ],
       "preferredNamespacePrefix" : [ {
@@ -124,7 +124,7 @@
     "id" : "3",
     "type" : "owl:Class"
   }, {
-    "id" : "6",
+    "id" : "4",
     "type" : "owl:Class"
   }, {
     "id" : "7",
@@ -142,7 +142,7 @@
     "id" : "16",
     "type" : "owl:Class"
   }, {
-    "id" : "4",
+    "id" : "5",
     "type" : "owl:Class"
   }, {
     "id" : "28",
@@ -160,10 +160,10 @@
     "id" : "51",
     "type" : "owl:Class"
   }, {
-    "id" : "52",
+    "id" : "53",
     "type" : "owl:Class"
   }, {
-    "id" : "53",
+    "id" : "54",
     "type" : "owl:Class"
   }, {
     "id" : "31",
@@ -238,7 +238,7 @@
     "id" : "15",
     "type" : "owl:Class"
   }, {
-    "id" : "5",
+    "id" : "6",
     "type" : "owl:Class"
   }, {
     "id" : "105",
@@ -292,7 +292,7 @@
     "id" : "100",
     "type" : "owl:Class"
   }, {
-    "id" : "54",
+    "id" : "52",
     "type" : "owl:Class"
   }, {
     "id" : "123",
@@ -317,6 +317,15 @@
     "type" : "owl:Class"
   } ],
   "classAttribute" : [ {
+    "iri" : "http://www.w3.org/ns/prov#Activity",
+    "baseIri" : "http://www.w3.org/ns/prov",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Activity"
+    },
+    "attributes" : [ "external" ],
+    "id" : "3"
+  }, {
     "iri" : "https://w3id.org/landrs/def/ontologies/core/UnderwaterGlider",
     "baseIri" : "https://w3id.org/landrs/def/ontologies/core",
     "instances" : 0,
@@ -324,7 +333,7 @@
       "wasDerivedFrom" : [ {
         "identifier" : "wasDerivedFrom",
         "language" : "undefined",
-        "value" : "_:genid7",
+        "value" : "_:genid24",
         "type" : "label"
       } ]
     },
@@ -335,17 +344,8 @@
     "comment" : {
       "en" : "An underwater glider is a type of autonomous underwater vehicle (AUV) that employs variable-buoyancy propulsion instead of traditional propellers or thrusters. It employs variable buoyancy in a similar way to a profiling float, but unlike a float, which can only move up and down, an underwater glider is fitted with hydrofoils (underwater wings) that allow it to glide forward while descending through the water. At a certain depth, the glider switches to positive buoyancy to climb back up, and the cycle is then repeated."
     },
-    "id" : "3",
-    "superClasses" : [ "4", "5" ]
-  }, {
-    "iri" : "http://www.w3.org/ns/prov#Activity",
-    "baseIri" : "http://www.w3.org/ns/prov",
-    "instances" : 0,
-    "label" : {
-      "IRI-based" : "Activity"
-    },
-    "attributes" : [ "external" ],
-    "id" : "6"
+    "id" : "4",
+    "superClasses" : [ "5", "6" ]
   }, {
     "iri" : "http://xmlns.com/foaf/0.1/Agent",
     "baseIri" : "http://xmlns.com/foaf/0.1",
@@ -372,7 +372,7 @@
       "wasDerivedFrom" : [ {
         "identifier" : "wasDerivedFrom",
         "language" : "undefined",
-        "value" : "_:genid8",
+        "value" : "_:genid18",
         "type" : "label"
       } ]
     },
@@ -411,7 +411,7 @@
       "isPartOf" : [ {
         "identifier" : "isPartOf",
         "language" : "undefined",
-        "value" : "_:genid15",
+        "value" : "_:genid8",
         "type" : "label"
       } ]
     },
@@ -430,16 +430,16 @@
     "baseIri" : "https://w3id.org/landrs/def/ontologies/core",
     "instances" : 0,
     "annotations" : {
-      "wasDerivedFrom" : [ {
-        "identifier" : "wasDerivedFrom",
-        "language" : "undefined",
-        "value" : "_:genid11",
-        "type" : "label"
-      } ],
       "altLabel" : [ {
         "identifier" : "altLabel",
         "language" : "en",
         "value" : "AUV",
+        "type" : "label"
+      } ],
+      "wasDerivedFrom" : [ {
+        "identifier" : "wasDerivedFrom",
+        "language" : "undefined",
+        "value" : "_:genid12",
         "type" : "label"
       } ]
     },
@@ -447,11 +447,11 @@
       "IRI-based" : "AUV",
       "en" : "Autonomous Underwater Vehicle"
     },
-    "subClasses" : [ "3" ],
+    "subClasses" : [ "4" ],
     "comment" : {
       "en" : "An autonomous underwater vehicle (AUV) is a robot that travels underwater without requiring input from an operator."
     },
-    "id" : "4",
+    "id" : "5",
     "superClasses" : [ "19", "10" ]
   }, {
     "iri" : "https://w3id.org/landrs/def/ontologies/core/Vessel",
@@ -461,7 +461,7 @@
       "wasDerivedFrom" : [ {
         "identifier" : "wasDerivedFrom",
         "language" : "undefined",
-        "value" : "_:genid20",
+        "value" : "_:genid16",
         "type" : "label"
       } ],
       "source" : [ {
@@ -488,7 +488,7 @@
       "wasDerivedFrom" : [ {
         "identifier" : "wasDerivedFrom",
         "language" : "undefined",
-        "value" : "_:genid30",
+        "value" : "_:genid22",
         "type" : "label"
       } ]
     },
@@ -530,27 +530,6 @@
     "attributes" : [ "external" ],
     "id" : "50"
   }, {
-    "iri" : "https://w3id.org/landrs/def/ontologies/core/FlightControlSystem",
-    "baseIri" : "https://w3id.org/landrs/def/ontologies/core",
-    "instances" : 0,
-    "label" : {
-      "IRI-based" : "FlightControlSystem",
-      "en" : "Flight Control System"
-    },
-    "comment" : {
-      "en" : "Aircraft system utilized to control flight surfaces"
-    },
-    "id" : "51"
-  }, {
-    "iri" : "http://www.w3.org/ns/prov#SoftwareAgent",
-    "baseIri" : "http://www.w3.org/ns/prov",
-    "instances" : 1,
-    "label" : {
-      "IRI-based" : "SoftwareAgent"
-    },
-    "attributes" : [ "external" ],
-    "id" : "52"
-  }, {
     "iri" : "https://w3id.org/landrs/def/ontologies/core/USV",
     "baseIri" : "https://w3id.org/landrs/def/ontologies/core",
     "instances" : 0,
@@ -564,7 +543,7 @@
       "wasDerivedFrom" : [ {
         "identifier" : "wasDerivedFrom",
         "language" : "undefined",
-        "value" : "_:genid9",
+        "value" : "_:genid15",
         "type" : "label"
       } ]
     },
@@ -575,8 +554,29 @@
     "comment" : {
       "en" : "Vehicle that operates on the surface of the water without a crew"
     },
-    "id" : "53",
-    "superClasses" : [ "25", "54" ]
+    "id" : "51",
+    "superClasses" : [ "25", "52" ]
+  }, {
+    "iri" : "https://w3id.org/landrs/def/ontologies/core/FlightControlSystem",
+    "baseIri" : "https://w3id.org/landrs/def/ontologies/core",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "FlightControlSystem",
+      "en" : "Flight Control System"
+    },
+    "comment" : {
+      "en" : "Aircraft system utilized to control flight surfaces"
+    },
+    "id" : "53"
+  }, {
+    "iri" : "http://www.w3.org/ns/prov#SoftwareAgent",
+    "baseIri" : "http://www.w3.org/ns/prov",
+    "instances" : 1,
+    "label" : {
+      "IRI-based" : "SoftwareAgent"
+    },
+    "attributes" : [ "external" ],
+    "id" : "54"
   }, {
     "iri" : "https://w3id.org/landrs/def/ontologies/core/Event",
     "baseIri" : "https://w3id.org/landrs/def/ontologies/core",
@@ -655,7 +655,7 @@
       "IRI-based" : "Vehicle",
       "en" : "Vehicle"
     },
-    "subClasses" : [ "9", "27", "25", "15", "13", "1", "5" ],
+    "subClasses" : [ "9", "27", "25", "15", "13", "1", "6" ],
     "comment" : { },
     "id" : "2",
     "superClasses" : [ "17" ]
@@ -693,7 +693,7 @@
       "isPartOf" : [ {
         "identifier" : "isPartOf",
         "language" : "undefined",
-        "value" : "_:genid24",
+        "value" : "_:genid27",
         "type" : "label"
       } ]
     },
@@ -788,7 +788,7 @@
       "isPartOf" : [ {
         "identifier" : "isPartOf",
         "language" : "undefined",
-        "value" : "_:genid18",
+        "value" : "_:genid7",
         "type" : "label"
       } ]
     },
@@ -817,7 +817,7 @@
       "wasDerivedFrom" : [ {
         "identifier" : "wasDerivedFrom",
         "language" : "undefined",
-        "value" : "_:genid19",
+        "value" : "_:genid14",
         "type" : "label"
       } ]
     },
@@ -829,7 +829,7 @@
       "en" : "A floating device that can be anchored (stationary) or allowed to drift with ocean currents."
     },
     "id" : "48",
-    "superClasses" : [ "5" ]
+    "superClasses" : [ "6" ]
   }, {
     "iri" : "https://w3id.org/landrs/def/ontologies/core/RoboticVehicle",
     "baseIri" : "https://w3id.org/landrs/def/ontologies/core",
@@ -838,7 +838,7 @@
       "wasDerivedFrom" : [ {
         "identifier" : "wasDerivedFrom",
         "language" : "undefined",
-        "value" : "_:genid14",
+        "value" : "_:genid25",
         "type" : "label"
       } ]
     },
@@ -846,7 +846,7 @@
       "IRI-based" : "RoboticVehicle",
       "en" : "Robotic Vehicle"
     },
-    "subClasses" : [ "54" ],
+    "subClasses" : [ "52" ],
     "comment" : {
       "en" : "Robotic vehicles are machines that move autonomously on the ground, in the air, undersea, or in space. Such vehicles are “unmanned,” in the sense that no humans are on board. In general, these vehicles move by themselves, under their own power, with sensors and computational resources onboard to guide their motion."
     },
@@ -857,16 +857,16 @@
     "baseIri" : "https://w3id.org/landrs/def/ontologies/core",
     "instances" : 0,
     "annotations" : {
+      "wasDerivedFrom" : [ {
+        "identifier" : "wasDerivedFrom",
+        "language" : "undefined",
+        "value" : "_:genid9",
+        "type" : "label"
+      } ],
       "altLabel" : [ {
         "identifier" : "altLabel",
         "language" : "en",
         "value" : "ROV",
-        "type" : "label"
-      } ],
-      "wasDerivedFrom" : [ {
-        "identifier" : "wasDerivedFrom",
-        "language" : "undefined",
-        "value" : "_:genid1",
         "type" : "label"
       } ]
     },
@@ -884,7 +884,7 @@
       "wasDerivedFrom" : [ {
         "identifier" : "wasDerivedFrom",
         "language" : "undefined",
-        "value" : "_:genid26",
+        "value" : "_:genid2",
         "type" : "label"
       } ]
     },
@@ -892,7 +892,7 @@
       "IRI-based" : "UnderwaterRobot",
       "en" : "Underwater Robot"
     },
-    "subClasses" : [ "4", "95" ],
+    "subClasses" : [ "5", "95" ],
     "comment" : {
       "en" : "Underwater Robots are vehicles that move autonomously underwater."
     },
@@ -916,7 +916,7 @@
       "wasDerivedFrom" : [ {
         "identifier" : "wasDerivedFrom",
         "language" : "undefined",
-        "value" : "_:genid4",
+        "value" : "_:genid3",
         "type" : "label"
       } ]
     },
@@ -934,7 +934,7 @@
       "wasDerivedFrom" : [ {
         "identifier" : "wasDerivedFrom",
         "language" : "undefined",
-        "value" : "_:genid28",
+        "value" : "_:genid29",
         "type" : "label"
       } ]
     },
@@ -942,7 +942,7 @@
       "IRI-based" : "MotorizedVehicle",
       "en" : "Motorized Vehicle"
     },
-    "subClasses" : [ "28", "95", "53", "37" ],
+    "subClasses" : [ "28", "95", "51", "37" ],
     "id" : "25",
     "superClasses" : [ "2" ]
   }, {
@@ -953,7 +953,7 @@
       "wasDerivedFrom" : [ {
         "identifier" : "wasDerivedFrom",
         "language" : "undefined",
-        "value" : "_:genid25",
+        "value" : "_:genid21",
         "type" : "label"
       } ]
     },
@@ -961,7 +961,7 @@
       "IRI-based" : "AutonomousRobot",
       "en" : "Autonomous Robot"
     },
-    "subClasses" : [ "80", "4" ],
+    "subClasses" : [ "80", "5" ],
     "comment" : {
       "en" : "An autonomous robot is a robot that performs behaviors or tasks with a high degree of autonomy (without external influence)."
     },
@@ -1004,7 +1004,7 @@
       "isPartOf" : [ {
         "identifier" : "isPartOf",
         "language" : "undefined",
-        "value" : "_:genid3",
+        "value" : "_:genid23",
         "type" : "label"
       } ]
     },
@@ -1025,7 +1025,7 @@
       "wasDerivedFrom" : [ {
         "identifier" : "wasDerivedFrom",
         "language" : "undefined",
-        "value" : "_:genid29",
+        "value" : "_:genid19",
         "type" : "label"
       } ]
     },
@@ -1033,7 +1033,7 @@
       "IRI-based" : "SurfaceVehicle",
       "en" : "Surface Vehicle"
     },
-    "subClasses" : [ "54", "28" ],
+    "subClasses" : [ "52", "28" ],
     "id" : "15",
     "superClasses" : [ "2" ]
   }, {
@@ -1044,7 +1044,7 @@
       "wasDerivedFrom" : [ {
         "identifier" : "wasDerivedFrom",
         "language" : "undefined",
-        "value" : "_:genid16",
+        "value" : "_:genid1",
         "type" : "label"
       } ]
     },
@@ -1052,8 +1052,8 @@
       "IRI-based" : "UnmotorizedVehicle",
       "en" : "Unmotorized Vehicle"
     },
-    "subClasses" : [ "3", "48" ],
-    "id" : "5",
+    "subClasses" : [ "4", "48" ],
+    "id" : "6",
     "superClasses" : [ "2" ]
   }, {
     "iri" : "https://schema.org/Organization",
@@ -1097,7 +1097,7 @@
       "isPartOf" : [ {
         "identifier" : "isPartOf",
         "language" : "undefined",
-        "value" : "_:genid5",
+        "value" : "_:genid13",
         "type" : "label"
       } ],
       "seeAlso" : [ {
@@ -1153,7 +1153,7 @@
       "isPartOf" : [ {
         "identifier" : "isPartOf",
         "language" : "undefined",
-        "value" : "_:genid17",
+        "value" : "_:genid5",
         "type" : "label"
       } ],
       "seeAlso" : [ {
@@ -1200,7 +1200,7 @@
       "wasDerivedFrom" : [ {
         "identifier" : "wasDerivedFrom",
         "language" : "undefined",
-        "value" : "_:genid22",
+        "value" : "_:genid26",
         "type" : "label"
       } ]
     },
@@ -1291,16 +1291,16 @@
     "baseIri" : "https://w3id.org/landrs/def/ontologies/core",
     "instances" : 0,
     "annotations" : {
+      "wasDerivedFrom" : [ {
+        "identifier" : "wasDerivedFrom",
+        "language" : "undefined",
+        "value" : "_:genid28",
+        "type" : "label"
+      } ],
       "altLabel" : [ {
         "identifier" : "altLabel",
         "language" : "undefined",
         "value" : "ASV",
-        "type" : "label"
-      } ],
-      "wasDerivedFrom" : [ {
-        "identifier" : "wasDerivedFrom",
-        "language" : "undefined",
-        "value" : "_:genid23",
         "type" : "label"
       } ]
     },
@@ -1312,7 +1312,7 @@
       "en" : "Vehicle that operates on the surface of the water without a crew"
     },
     "id" : "80",
-    "superClasses" : [ "19", "54" ]
+    "superClasses" : [ "19", "52" ]
   }, {
     "iri" : "https://schema.org/WebAPI",
     "baseIri" : "https://schema.org",
@@ -1343,7 +1343,7 @@
       "wasDerivedFrom" : [ {
         "identifier" : "wasDerivedFrom",
         "language" : "undefined",
-        "value" : "_:genid21",
+        "value" : "_:genid30",
         "type" : "label"
       } ]
     },
@@ -1351,11 +1351,11 @@
       "IRI-based" : "SurfaceRobot",
       "en" : "Underwater Robot"
     },
-    "subClasses" : [ "80", "53" ],
+    "subClasses" : [ "80", "51" ],
     "comment" : {
       "en" : "Surface Robots are vehicles that move autonomously on the water surface."
     },
-    "id" : "54",
+    "id" : "52",
     "superClasses" : [ "15", "1" ]
   }, {
     "iri" : "http://www.w3.org/ns/dcat#Dataset",
@@ -1475,7 +1475,7 @@
     },
     "subClasses" : [ "63" ],
     "comment" : {
-      "undefined" : "A machine that is able to fly by gaining support from the air other than the reactions of the air against the earth’s surface"
+      "undefined" : "Synonym with Aircraft"
     },
     "id" : "13",
     "superClasses" : [ "2" ]
@@ -1729,8 +1729,8 @@
     "attributes" : [ "anonymous", "object" ],
     "id" : "43"
   }, {
-    "range" : "5",
-    "domain" : "3",
+    "range" : "6",
+    "domain" : "4",
     "attributes" : [ "anonymous", "object" ],
     "id" : "44"
   }, {
@@ -1744,7 +1744,7 @@
     "attributes" : [ "anonymous", "object" ],
     "id" : "46"
   }, {
-    "range" : "5",
+    "range" : "6",
     "domain" : "48",
     "attributes" : [ "anonymous", "object" ],
     "id" : "47"
@@ -1755,12 +1755,12 @@
     "id" : "49"
   }, {
     "range" : "15",
-    "domain" : "54",
+    "domain" : "52",
     "attributes" : [ "anonymous", "object" ],
     "id" : "55"
   }, {
-    "range" : "4",
-    "domain" : "3",
+    "range" : "5",
+    "domain" : "4",
     "attributes" : [ "anonymous", "object" ],
     "id" : "58"
   }, {
@@ -1779,12 +1779,12 @@
     "attributes" : [ "anonymous", "object" ],
     "id" : "64"
   }, {
-    "range" : "54",
-    "domain" : "53",
+    "range" : "52",
+    "domain" : "51",
     "attributes" : [ "anonymous", "object" ],
     "id" : "77"
   }, {
-    "range" : "54",
+    "range" : "52",
     "domain" : "80",
     "attributes" : [ "anonymous", "object" ],
     "id" : "79"
@@ -1860,7 +1860,7 @@
     "id" : "96"
   }, {
     "range" : "2",
-    "domain" : "5",
+    "domain" : "6",
     "attributes" : [ "anonymous", "object" ],
     "id" : "97"
   }, {
@@ -1902,7 +1902,7 @@
     "id" : "107"
   }, {
     "range" : "1",
-    "domain" : "54",
+    "domain" : "52",
     "attributes" : [ "anonymous", "object" ],
     "id" : "108"
   }, {
@@ -1917,7 +1917,7 @@
     "id" : "110"
   }, {
     "range" : "10",
-    "domain" : "4",
+    "domain" : "5",
     "attributes" : [ "anonymous", "object" ],
     "id" : "111"
   }, {
@@ -1932,7 +1932,7 @@
     "id" : "114"
   }, {
     "range" : "25",
-    "domain" : "53",
+    "domain" : "51",
     "attributes" : [ "anonymous", "object" ],
     "id" : "115"
   }, {
@@ -1947,7 +1947,7 @@
     "id" : "117"
   }, {
     "range" : "19",
-    "domain" : "4",
+    "domain" : "5",
     "attributes" : [ "anonymous", "object" ],
     "id" : "118"
   }, {
@@ -1956,7 +1956,7 @@
     "attributes" : [ "anonymous", "object" ],
     "id" : "119"
   }, {
-    "domain" : "52",
+    "domain" : "54",
     "range" : "35",
     "id" : "121",
     "label" : {

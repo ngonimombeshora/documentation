@@ -23,7 +23,7 @@
     },
     "iri" : "https://w3id.org/landrs/def/ontologies/",
     "version" : "0.0.1",
-    "author" : [ "_:genid25", "_:genid11", "https://w3id.org/landrs/def/landrs/" ],
+    "author" : [ "_:genid25", "https://w3id.org/landrs/def/landrs/", "_:genid21" ],
     "description" : {
       "en" : "This ontology is developed as part of the Sloan Funded LANDRS project to advance UxV data interoperability"
     },
@@ -31,13 +31,13 @@
       "funder" : [ {
         "identifier" : "funder",
         "language" : "undefined",
-        "value" : "_:genid8",
+        "value" : "_:genid5",
         "type" : "label"
       } ],
       "creator" : [ {
         "identifier" : "creator",
         "language" : "undefined",
-        "value" : "_:genid11",
+        "value" : "_:genid21",
         "type" : "label"
       }, {
         "identifier" : "creator",
@@ -53,7 +53,7 @@
       "wasGeneratedBy" : [ {
         "identifier" : "wasGeneratedBy",
         "language" : "undefined",
-        "value" : "_:genid2",
+        "value" : "_:genid7",
         "type" : "label"
       } ],
       "created" : [ {
@@ -77,12 +77,12 @@
       "hasResource" : [ {
         "identifier" : "hasResource",
         "language" : "undefined",
-        "value" : "_:genid1",
+        "value" : "_:genid2",
         "type" : "label"
       }, {
         "identifier" : "hasResource",
         "language" : "undefined",
-        "value" : "_:genid4",
+        "value" : "_:genid6",
         "type" : "label"
       } ],
       "modified" : [ {
@@ -149,20 +149,20 @@
     "type" : "owl:Class"
   } ],
   "classAttribute" : [ {
-    "iri" : "https://schema.org/Organization",
-    "baseIri" : "https://schema.org",
-    "instances" : 0,
-    "label" : {
-      "IRI-based" : "Organization"
-    },
-    "attributes" : [ "external" ],
-    "id" : "0"
-  }, {
     "iri" : "http://www.w3.org/ns/prov#Activity",
     "baseIri" : "http://www.w3.org/ns/prov",
     "instances" : 0,
     "label" : {
       "IRI-based" : "Activity"
+    },
+    "attributes" : [ "external" ],
+    "id" : "0"
+  }, {
+    "iri" : "https://schema.org/Organization",
+    "baseIri" : "https://schema.org",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Organization"
     },
     "attributes" : [ "external" ],
     "id" : "1"
