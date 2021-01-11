@@ -57,10 +57,10 @@
                 <terms:conformsTo rdf:resource="https://www.w3.org/TR/shacl/"/>
                 <prof:hasRole rdf:resource="http://www.w3.org/ns/dx/prof/role/validation"/>
                 <terms:format rdf:resource="https://w3id.org/mediatype/text/turtle"/>
+                <schema:contentType>application/n-triples</schema:contentType>
                 <rdf:type rdf:resource="http://www.w3.org/ns/dx/prof/ResourceDescriptor"/>
                 <rdf:type rdf:resource="https://schema.org/WebAPI"/>
                 <schema:contentType>application/ld+json</schema:contentType>
-                <schema:contentType>application/n-triples</schema:contentType>
                 <schema:url>https://w3id.org/landrs/ontologies/ns/core</schema:url>
             </rdf:Description>
         </prof:hasResource>

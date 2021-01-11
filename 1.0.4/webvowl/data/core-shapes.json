@@ -21,7 +21,7 @@
     },
     "iri" : "http://www.semanticweb.org/owl/owlapi/turtle#",
     "version" : "0.0.1",
-    "author" : [ "_:genid12", "_:genid11" ],
+    "author" : [ "_:genid11", "_:genid8" ],
     "description" : {
       "en" : "This ontology is developed as part of the Sloan Funded LANDRS project to advance UxV data interoperability"
     },
@@ -35,7 +35,7 @@
       "creator" : [ {
         "identifier" : "creator",
         "language" : "undefined",
-        "value" : "_:genid12",
+        "value" : "_:genid8",
         "type" : "label"
       }, {
         "identifier" : "creator",
@@ -58,7 +58,7 @@
       "hasResource" : [ {
         "identifier" : "hasResource",
         "language" : "undefined",
-        "value" : "_:genid2",
+        "value" : "_:genid1",
         "type" : "label"
       } ],
       "versionInfo" : [ {
@@ -81,7 +81,7 @@
       "wasGeneratedBy" : [ {
         "identifier" : "wasGeneratedBy",
         "language" : "undefined",
-        "value" : "_:genid4",
+        "value" : "_:genid5",
         "type" : "label"
       } ],
       "rights" : [ {

@@ -1248,8 +1248,8 @@
         <rdfs:label>UxVOperator</rdfs:label>
     </rdf:Description>
     <rdf:Description rdf:about="https://w3id.org/landrs/def/ontologies/core/bodyType">
-        <schema:domainIncludes rdf:resource="https://schema.org/Vehicle"/>
         <terms:source rdf:resource="http://www.w3.org/wiki/Websdos/sdoDotOrgSources#Automotive_Ontology_Working_Group"/>
+        <schema:domainIncludes rdf:resource="https://schema.org/Vehicle"/>
         <rdfs:label xml:lang="en">bodyType</rdfs:label>
         <schema:rangeIncludes rdf:resource="https://schema.org/Text"/>
         <rdfs:comment xml:lang="en">Indicates the design and body style of the vehicle (e.g. quadcopter, glider.</rdfs:comment>
