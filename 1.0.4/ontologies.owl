@@ -27,13 +27,13 @@
                     </rdf:Description>
                 </schema:affiliation>
                 <schema:identifier rdf:resource="https://orcid.org/0000-0003-4091-6059"/>
+                <schema:name>Charles F Vardeman II</schema:name>
                 <schema:affiliation>
                     <rdf:Description>
                         <schema:name>University of Notre Dame, Center for Research Computing</schema:name>
                         <schema:url rdf:resource="https://crc.nd.edu"/>
                     </rdf:Description>
                 </schema:affiliation>
-                <schema:name>Charles F Vardeman II</schema:name>
                 <org:memberOf rdf:resource="http://dbpedia.org/resource/University_of_Notre_Dame"/>
             </rdf:Description>
         </terms:creator>

@@ -23,7 +23,7 @@
     },
     "iri" : "https://w3id.org/landrs/def/ontologies/",
     "version" : "0.0.1",
-    "author" : [ "_:genid23", "_:genid12", "https://w3id.org/landrs/def/landrs/" ],
+    "author" : [ "_:genid25", "_:genid11", "https://w3id.org/landrs/def/landrs/" ],
     "description" : {
       "en" : "This ontology is developed as part of the Sloan Funded LANDRS project to advance UxV data interoperability"
     },
@@ -31,18 +31,18 @@
       "funder" : [ {
         "identifier" : "funder",
         "language" : "undefined",
-        "value" : "_:genid4",
+        "value" : "_:genid8",
         "type" : "label"
       } ],
       "creator" : [ {
         "identifier" : "creator",
         "language" : "undefined",
-        "value" : "_:genid23",
+        "value" : "_:genid11",
         "type" : "label"
       }, {
         "identifier" : "creator",
         "language" : "undefined",
-        "value" : "_:genid12",
+        "value" : "_:genid25",
         "type" : "label"
       }, {
         "identifier" : "creator",
@@ -53,7 +53,7 @@
       "wasGeneratedBy" : [ {
         "identifier" : "wasGeneratedBy",
         "language" : "undefined",
-        "value" : "_:genid7",
+        "value" : "_:genid2",
         "type" : "label"
       } ],
       "created" : [ {
@@ -62,39 +62,33 @@
         "value" : "2020-08-12",
         "type" : "label"
       } ],
-      "preferredNamespacePrefix" : [ {
-        "identifier" : "preferredNamespacePrefix",
-        "language" : "undefined",
-        "value" : "landrs",
-        "type" : "label"
-      } ],
       "rights" : [ {
         "identifier" : "rights",
         "language" : "undefined",
         "value" : "Copyright 2020 University of Notre Dame.",
         "type" : "label"
       } ],
+      "preferredNamespacePrefix" : [ {
+        "identifier" : "preferredNamespacePrefix",
+        "language" : "undefined",
+        "value" : "landrs",
+        "type" : "label"
+      } ],
       "hasResource" : [ {
         "identifier" : "hasResource",
         "language" : "undefined",
-        "value" : "_:genid2",
+        "value" : "_:genid1",
         "type" : "label"
       }, {
         "identifier" : "hasResource",
         "language" : "undefined",
-        "value" : "_:genid8",
+        "value" : "_:genid4",
         "type" : "label"
       } ],
       "modified" : [ {
         "identifier" : "modified",
         "language" : "undefined",
         "value" : "2020-08-25",
-        "type" : "label"
-      } ],
-      "preferredNamespaceUri" : [ {
-        "identifier" : "preferredNamespaceUri",
-        "language" : "undefined",
-        "value" : "https://w3id.org/landrs/ontologies/def/ontologies/",
         "type" : "label"
       } ],
       "versionInfo" : [ {
@@ -112,6 +106,12 @@
         "identifier" : "licnese",
         "language" : "undefined",
         "value" : "https://creativecommons.org/publicdomain/zero/1.0",
+        "type" : "label"
+      } ],
+      "preferredNamespaceUri" : [ {
+        "identifier" : "preferredNamespaceUri",
+        "language" : "undefined",
+        "value" : "https://w3id.org/landrs/ontologies/def/ontologies/",
         "type" : "label"
       } ],
       "title" : [ {
@@ -149,20 +149,20 @@
     "type" : "owl:Class"
   } ],
   "classAttribute" : [ {
-    "iri" : "http://www.w3.org/ns/prov#Activity",
-    "baseIri" : "http://www.w3.org/ns/prov",
-    "instances" : 0,
-    "label" : {
-      "IRI-based" : "Activity"
-    },
-    "attributes" : [ "external" ],
-    "id" : "0"
-  }, {
     "iri" : "https://schema.org/Organization",
     "baseIri" : "https://schema.org",
     "instances" : 0,
     "label" : {
       "IRI-based" : "Organization"
+    },
+    "attributes" : [ "external" ],
+    "id" : "0"
+  }, {
+    "iri" : "http://www.w3.org/ns/prov#Activity",
+    "baseIri" : "http://www.w3.org/ns/prov",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Activity"
     },
     "attributes" : [ "external" ],
     "id" : "1"

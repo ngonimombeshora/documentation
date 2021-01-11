@@ -24,7 +24,7 @@
     },
     "iri" : "https://w3id.org/landrs/def/ontologies/core/",
     "version" : "0.0.1",
-    "author" : [ "_:genid36", "_:genid37" ],
+    "author" : [ "_:genid34", "_:genid38" ],
     "description" : {
       "en" : "This ontology is developed as part of the Sloan Funded LANDRS project to advance UxV data interoperability"
     },
@@ -38,18 +38,12 @@
       "creator" : [ {
         "identifier" : "creator",
         "language" : "undefined",
-        "value" : "_:genid37",
+        "value" : "_:genid34",
         "type" : "label"
       }, {
         "identifier" : "creator",
         "language" : "undefined",
-        "value" : "_:genid36",
-        "type" : "label"
-      } ],
-      "created" : [ {
-        "identifier" : "created",
-        "language" : "undefined",
-        "value" : "2020-08-12",
+        "value" : "_:genid38",
         "type" : "label"
       } ],
       "isProfileOf" : [ {
@@ -58,10 +52,16 @@
         "value" : "https://w3id.org/landrs/ns/ontologies/",
         "type" : "iri"
       } ],
+      "created" : [ {
+        "identifier" : "created",
+        "language" : "undefined",
+        "value" : "2020-08-12",
+        "type" : "label"
+      } ],
       "hasResource" : [ {
         "identifier" : "hasResource",
         "language" : "undefined",
-        "value" : "_:genid2",
+        "value" : "_:genid10",
         "type" : "label"
       } ],
       "versionInfo" : [ {
@@ -84,13 +84,7 @@
       "wasGeneratedBy" : [ {
         "identifier" : "wasGeneratedBy",
         "language" : "undefined",
-        "value" : "_:genid21",
-        "type" : "label"
-      } ],
-      "rights" : [ {
-        "identifier" : "rights",
-        "language" : "undefined",
-        "value" : "Copyright 2020 University of Notre Dame.",
+        "value" : "_:genid13",
         "type" : "label"
       } ],
       "preferredNamespacePrefix" : [ {
@@ -99,22 +93,28 @@
         "value" : "landrs-core",
         "type" : "label"
       } ],
+      "rights" : [ {
+        "identifier" : "rights",
+        "language" : "undefined",
+        "value" : "Copyright 2020 University of Notre Dame.",
+        "type" : "label"
+      } ],
       "modified" : [ {
         "identifier" : "modified",
         "language" : "undefined",
         "value" : "2020-08-12",
         "type" : "label"
       } ],
-      "preferredNamespaceUri" : [ {
-        "identifier" : "preferredNamespaceUri",
-        "language" : "undefined",
-        "value" : "https://w3id.org/landrs/ontologies/ns/core/",
-        "type" : "label"
-      } ],
       "licnese" : [ {
         "identifier" : "licnese",
         "language" : "undefined",
         "value" : "https://creativecommons.org/publicdomain/zero/1.0",
+        "type" : "label"
+      } ],
+      "preferredNamespaceUri" : [ {
+        "identifier" : "preferredNamespaceUri",
+        "language" : "undefined",
+        "value" : "https://w3id.org/landrs/ontologies/ns/core/",
         "type" : "label"
       } ]
     }
@@ -160,10 +160,10 @@
     "id" : "51",
     "type" : "owl:Class"
   }, {
-    "id" : "53",
+    "id" : "52",
     "type" : "owl:Class"
   }, {
-    "id" : "54",
+    "id" : "53",
     "type" : "owl:Class"
   }, {
     "id" : "31",
@@ -220,10 +220,10 @@
     "id" : "39",
     "type" : "owl:Class"
   }, {
-    "id" : "19",
+    "id" : "25",
     "type" : "owl:Class"
   }, {
-    "id" : "25",
+    "id" : "19",
     "type" : "owl:Class"
   }, {
     "id" : "22",
@@ -292,7 +292,7 @@
     "id" : "100",
     "type" : "owl:Class"
   }, {
-    "id" : "52",
+    "id" : "54",
     "type" : "owl:Class"
   }, {
     "id" : "123",
@@ -301,10 +301,10 @@
     "id" : "37",
     "type" : "owl:Class"
   }, {
-    "id" : "71",
+    "id" : "61",
     "type" : "owl:Class"
   }, {
-    "id" : "61",
+    "id" : "71",
     "type" : "owl:Class"
   }, {
     "id" : "65",
@@ -324,7 +324,7 @@
       "wasDerivedFrom" : [ {
         "identifier" : "wasDerivedFrom",
         "language" : "undefined",
-        "value" : "_:genid10",
+        "value" : "_:genid7",
         "type" : "label"
       } ]
     },
@@ -411,7 +411,7 @@
       "isPartOf" : [ {
         "identifier" : "isPartOf",
         "language" : "undefined",
-        "value" : "_:genid1",
+        "value" : "_:genid15",
         "type" : "label"
       } ]
     },
@@ -461,7 +461,7 @@
       "wasDerivedFrom" : [ {
         "identifier" : "wasDerivedFrom",
         "language" : "undefined",
-        "value" : "_:genid23",
+        "value" : "_:genid20",
         "type" : "label"
       } ],
       "source" : [ {
@@ -488,7 +488,7 @@
       "wasDerivedFrom" : [ {
         "identifier" : "wasDerivedFrom",
         "language" : "undefined",
-        "value" : "_:genid18",
+        "value" : "_:genid30",
         "type" : "label"
       } ]
     },
@@ -530,33 +530,6 @@
     "attributes" : [ "external" ],
     "id" : "50"
   }, {
-    "iri" : "https://w3id.org/landrs/def/ontologies/core/USV",
-    "baseIri" : "https://w3id.org/landrs/def/ontologies/core",
-    "instances" : 0,
-    "annotations" : {
-      "wasDerivedFrom" : [ {
-        "identifier" : "wasDerivedFrom",
-        "language" : "undefined",
-        "value" : "_:genid12",
-        "type" : "label"
-      } ],
-      "altLabel" : [ {
-        "identifier" : "altLabel",
-        "language" : "en",
-        "value" : "USV",
-        "type" : "label"
-      } ]
-    },
-    "label" : {
-      "IRI-based" : "USV",
-      "en" : "Unmanned Surface Vehicle"
-    },
-    "comment" : {
-      "en" : "Vehicle that operates on the surface of the water without a crew"
-    },
-    "id" : "51",
-    "superClasses" : [ "25", "52" ]
-  }, {
     "iri" : "https://w3id.org/landrs/def/ontologies/core/FlightControlSystem",
     "baseIri" : "https://w3id.org/landrs/def/ontologies/core",
     "instances" : 0,
@@ -567,7 +540,7 @@
     "comment" : {
       "en" : "Aircraft system utilized to control flight surfaces"
     },
-    "id" : "53"
+    "id" : "51"
   }, {
     "iri" : "http://www.w3.org/ns/prov#SoftwareAgent",
     "baseIri" : "http://www.w3.org/ns/prov",
@@ -576,7 +549,34 @@
       "IRI-based" : "SoftwareAgent"
     },
     "attributes" : [ "external" ],
-    "id" : "54"
+    "id" : "52"
+  }, {
+    "iri" : "https://w3id.org/landrs/def/ontologies/core/USV",
+    "baseIri" : "https://w3id.org/landrs/def/ontologies/core",
+    "instances" : 0,
+    "annotations" : {
+      "altLabel" : [ {
+        "identifier" : "altLabel",
+        "language" : "en",
+        "value" : "USV",
+        "type" : "label"
+      } ],
+      "wasDerivedFrom" : [ {
+        "identifier" : "wasDerivedFrom",
+        "language" : "undefined",
+        "value" : "_:genid9",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "USV",
+      "en" : "Unmanned Surface Vehicle"
+    },
+    "comment" : {
+      "en" : "Vehicle that operates on the surface of the water without a crew"
+    },
+    "id" : "53",
+    "superClasses" : [ "25", "54" ]
   }, {
     "iri" : "https://w3id.org/landrs/def/ontologies/core/Event",
     "baseIri" : "https://w3id.org/landrs/def/ontologies/core",
@@ -693,7 +693,7 @@
       "isPartOf" : [ {
         "identifier" : "isPartOf",
         "language" : "undefined",
-        "value" : "_:genid4",
+        "value" : "_:genid24",
         "type" : "label"
       } ]
     },
@@ -788,7 +788,7 @@
       "isPartOf" : [ {
         "identifier" : "isPartOf",
         "language" : "undefined",
-        "value" : "_:genid28",
+        "value" : "_:genid18",
         "type" : "label"
       } ]
     },
@@ -797,9 +797,7 @@
       "en" : "Payload"
     },
     "subClasses" : [ "56" ],
-    "comment" : {
-      "en" : "Unmanned vehicle payload"
-    },
+    "comment" : { },
     "id" : "57"
   }, {
     "iri" : "https://w3id.org/landrs/def/ontologies/core/Agent",
@@ -819,7 +817,7 @@
       "wasDerivedFrom" : [ {
         "identifier" : "wasDerivedFrom",
         "language" : "undefined",
-        "value" : "_:genid20",
+        "value" : "_:genid19",
         "type" : "label"
       } ]
     },
@@ -840,7 +838,7 @@
       "wasDerivedFrom" : [ {
         "identifier" : "wasDerivedFrom",
         "language" : "undefined",
-        "value" : "_:genid22",
+        "value" : "_:genid14",
         "type" : "label"
       } ]
     },
@@ -848,7 +846,7 @@
       "IRI-based" : "RoboticVehicle",
       "en" : "Robotic Vehicle"
     },
-    "subClasses" : [ "52" ],
+    "subClasses" : [ "54" ],
     "comment" : {
       "en" : "Robotic vehicles are machines that move autonomously on the ground, in the air, undersea, or in space. Such vehicles are “unmanned,” in the sense that no humans are on board. In general, these vehicles move by themselves, under their own power, with sensors and computational resources onboard to guide their motion."
     },
@@ -868,7 +866,7 @@
       "wasDerivedFrom" : [ {
         "identifier" : "wasDerivedFrom",
         "language" : "undefined",
-        "value" : "_:genid5",
+        "value" : "_:genid1",
         "type" : "label"
       } ]
     },
@@ -886,7 +884,7 @@
       "wasDerivedFrom" : [ {
         "identifier" : "wasDerivedFrom",
         "language" : "undefined",
-        "value" : "_:genid13",
+        "value" : "_:genid26",
         "type" : "label"
       } ]
     },
@@ -918,7 +916,7 @@
       "wasDerivedFrom" : [ {
         "identifier" : "wasDerivedFrom",
         "language" : "undefined",
-        "value" : "_:genid6",
+        "value" : "_:genid4",
         "type" : "label"
       } ]
     },
@@ -929,6 +927,25 @@
     "id" : "39",
     "superClasses" : [ "38" ]
   }, {
+    "iri" : "https://w3id.org/landrs/def/ontologies/core/MotorizedVehicle",
+    "baseIri" : "https://w3id.org/landrs/def/ontologies/core",
+    "instances" : 0,
+    "annotations" : {
+      "wasDerivedFrom" : [ {
+        "identifier" : "wasDerivedFrom",
+        "language" : "undefined",
+        "value" : "_:genid28",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "MotorizedVehicle",
+      "en" : "Motorized Vehicle"
+    },
+    "subClasses" : [ "28", "95", "53", "37" ],
+    "id" : "25",
+    "superClasses" : [ "2" ]
+  }, {
     "iri" : "https://w3id.org/landrs/def/ontologies/core/AutonomousRobot",
     "baseIri" : "https://w3id.org/landrs/def/ontologies/core",
     "instances" : 0,
@@ -936,7 +953,7 @@
       "wasDerivedFrom" : [ {
         "identifier" : "wasDerivedFrom",
         "language" : "undefined",
-        "value" : "_:genid17",
+        "value" : "_:genid25",
         "type" : "label"
       } ]
     },
@@ -950,25 +967,6 @@
     },
     "id" : "19",
     "superClasses" : [ "38" ]
-  }, {
-    "iri" : "https://w3id.org/landrs/def/ontologies/core/MotorizedVehicle",
-    "baseIri" : "https://w3id.org/landrs/def/ontologies/core",
-    "instances" : 0,
-    "annotations" : {
-      "wasDerivedFrom" : [ {
-        "identifier" : "wasDerivedFrom",
-        "language" : "undefined",
-        "value" : "_:genid9",
-        "type" : "label"
-      } ]
-    },
-    "label" : {
-      "IRI-based" : "MotorizedVehicle",
-      "en" : "Motorized Vehicle"
-    },
-    "subClasses" : [ "28", "95", "51", "37" ],
-    "id" : "25",
-    "superClasses" : [ "2" ]
   }, {
     "iri" : "https://w3id.org/landrs/def/ontologies/core/Researcher",
     "baseIri" : "https://w3id.org/landrs/def/ontologies/core",
@@ -1006,7 +1004,7 @@
       "isPartOf" : [ {
         "identifier" : "isPartOf",
         "language" : "undefined",
-        "value" : "_:genid29",
+        "value" : "_:genid3",
         "type" : "label"
       } ]
     },
@@ -1027,7 +1025,7 @@
       "wasDerivedFrom" : [ {
         "identifier" : "wasDerivedFrom",
         "language" : "undefined",
-        "value" : "_:genid14",
+        "value" : "_:genid29",
         "type" : "label"
       } ]
     },
@@ -1035,7 +1033,7 @@
       "IRI-based" : "SurfaceVehicle",
       "en" : "Surface Vehicle"
     },
-    "subClasses" : [ "52", "28" ],
+    "subClasses" : [ "54", "28" ],
     "id" : "15",
     "superClasses" : [ "2" ]
   }, {
@@ -1046,7 +1044,7 @@
       "wasDerivedFrom" : [ {
         "identifier" : "wasDerivedFrom",
         "language" : "undefined",
-        "value" : "_:genid3",
+        "value" : "_:genid16",
         "type" : "label"
       } ]
     },
@@ -1099,7 +1097,7 @@
       "isPartOf" : [ {
         "identifier" : "isPartOf",
         "language" : "undefined",
-        "value" : "_:genid26",
+        "value" : "_:genid5",
         "type" : "label"
       } ],
       "seeAlso" : [ {
@@ -1155,7 +1153,7 @@
       "isPartOf" : [ {
         "identifier" : "isPartOf",
         "language" : "undefined",
-        "value" : "_:genid30",
+        "value" : "_:genid17",
         "type" : "label"
       } ],
       "seeAlso" : [ {
@@ -1202,7 +1200,7 @@
       "wasDerivedFrom" : [ {
         "identifier" : "wasDerivedFrom",
         "language" : "undefined",
-        "value" : "_:genid25",
+        "value" : "_:genid22",
         "type" : "label"
       } ]
     },
@@ -1302,7 +1300,7 @@
       "wasDerivedFrom" : [ {
         "identifier" : "wasDerivedFrom",
         "language" : "undefined",
-        "value" : "_:genid7",
+        "value" : "_:genid23",
         "type" : "label"
       } ]
     },
@@ -1314,7 +1312,7 @@
       "en" : "Vehicle that operates on the surface of the water without a crew"
     },
     "id" : "80",
-    "superClasses" : [ "19", "52" ]
+    "superClasses" : [ "19", "54" ]
   }, {
     "iri" : "https://schema.org/WebAPI",
     "baseIri" : "https://schema.org",
@@ -1345,7 +1343,7 @@
       "wasDerivedFrom" : [ {
         "identifier" : "wasDerivedFrom",
         "language" : "undefined",
-        "value" : "_:genid19",
+        "value" : "_:genid21",
         "type" : "label"
       } ]
     },
@@ -1353,11 +1351,11 @@
       "IRI-based" : "SurfaceRobot",
       "en" : "Underwater Robot"
     },
-    "subClasses" : [ "80", "51" ],
+    "subClasses" : [ "80", "53" ],
     "comment" : {
       "en" : "Surface Robots are vehicles that move autonomously on the water surface."
     },
-    "id" : "52",
+    "id" : "54",
     "superClasses" : [ "15", "1" ]
   }, {
     "iri" : "http://www.w3.org/ns/dcat#Dataset",
@@ -1407,6 +1405,16 @@
     "id" : "37",
     "superClasses" : [ "27", "63", "25" ]
   }, {
+    "iri" : "https://schema.org/Place",
+    "baseIri" : "https://schema.org",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Place"
+    },
+    "subClasses" : [ "60" ],
+    "attributes" : [ "external" ],
+    "id" : "61"
+  }, {
     "iri" : "https://w3id.org/landrs/def/ontologies/core/UAS",
     "baseIri" : "https://w3id.org/landrs/def/ontologies/core",
     "instances" : 0,
@@ -1433,16 +1441,6 @@
     },
     "id" : "71",
     "superClasses" : [ "17" ]
-  }, {
-    "iri" : "https://schema.org/Place",
-    "baseIri" : "https://schema.org",
-    "instances" : 0,
-    "label" : {
-      "IRI-based" : "Place"
-    },
-    "subClasses" : [ "60" ],
-    "attributes" : [ "external" ],
-    "id" : "61"
   }, {
     "iri" : "https://schema.org/Product",
     "baseIri" : "https://schema.org",
@@ -1477,7 +1475,7 @@
     },
     "subClasses" : [ "63" ],
     "comment" : {
-      "undefined" : "Synonym with Aircraft"
+      "undefined" : "A machine that is able to fly by gaining support from the air other than the reactions of the air against the earth’s surface"
     },
     "id" : "13",
     "superClasses" : [ "2" ]
@@ -1757,7 +1755,7 @@
     "id" : "49"
   }, {
     "range" : "15",
-    "domain" : "52",
+    "domain" : "54",
     "attributes" : [ "anonymous", "object" ],
     "id" : "55"
   }, {
@@ -1781,12 +1779,12 @@
     "attributes" : [ "anonymous", "object" ],
     "id" : "64"
   }, {
-    "range" : "52",
-    "domain" : "51",
+    "range" : "54",
+    "domain" : "53",
     "attributes" : [ "anonymous", "object" ],
     "id" : "77"
   }, {
-    "range" : "52",
+    "range" : "54",
     "domain" : "80",
     "attributes" : [ "anonymous", "object" ],
     "id" : "79"
@@ -1904,7 +1902,7 @@
     "id" : "107"
   }, {
     "range" : "1",
-    "domain" : "52",
+    "domain" : "54",
     "attributes" : [ "anonymous", "object" ],
     "id" : "108"
   }, {
@@ -1923,33 +1921,33 @@
     "attributes" : [ "anonymous", "object" ],
     "id" : "111"
   }, {
-    "range" : "19",
-    "domain" : "80",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "113"
-  }, {
-    "range" : "19",
-    "domain" : "4",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "114"
-  }, {
     "range" : "25",
     "domain" : "28",
     "attributes" : [ "anonymous", "object" ],
-    "id" : "115"
+    "id" : "113"
   }, {
     "range" : "25",
     "domain" : "95",
     "attributes" : [ "anonymous", "object" ],
-    "id" : "116"
+    "id" : "114"
   }, {
     "range" : "25",
-    "domain" : "51",
+    "domain" : "53",
     "attributes" : [ "anonymous", "object" ],
-    "id" : "117"
+    "id" : "115"
   }, {
     "range" : "25",
     "domain" : "37",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "116"
+  }, {
+    "range" : "19",
+    "domain" : "80",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "117"
+  }, {
+    "range" : "19",
+    "domain" : "4",
     "attributes" : [ "anonymous", "object" ],
     "id" : "118"
   }, {
@@ -1958,7 +1956,7 @@
     "attributes" : [ "anonymous", "object" ],
     "id" : "119"
   }, {
-    "domain" : "54",
+    "domain" : "52",
     "range" : "35",
     "id" : "121",
     "label" : {
